@@ -194,7 +194,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BL\AppHelper.cs" />
     <Compile Include="BL\Base.cs" />
+    <Compile Include="BL\Factory.cs" />
     <Compile Include="BL\ISecService.cs" />
+    <Compile Include="BL\Populate.cs" />
     <Compile Include="BL\SecService.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -336,6 +338,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{f8fa7a5d-7897-41d7-9acc-084b756b1a1e}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,5 @@
+C:\Users\Cosmin\Documents\Visual Studio 2013\Projects\SecProject\Common\bin\Debug\Common.dll
+C:\Users\Cosmin\Documents\Visual Studio 2013\Projects\SecProject\Common\bin\Debug\Common.pdb
+C:\Users\Cosmin\Documents\Visual Studio 2013\Projects\SecProject\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Cosmin\Documents\Visual Studio 2013\Projects\SecProject\Common\obj\Debug\Common.dll
+C:\Users\Cosmin\Documents\Visual Studio 2013\Projects\SecProject\Common\obj\Debug\Common.pdb

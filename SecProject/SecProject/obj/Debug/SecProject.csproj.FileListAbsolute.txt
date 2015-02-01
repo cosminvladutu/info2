@@ -92,3 +92,5 @@ c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\HtmlAgilityPack.xml
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\VDS.Common.pdb
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\VDS.Common.xml
+C:\Users\Cosmin\Documents\Visual Studio 2013\Projects\SecProject\SecProject\bin\Common.dll
+C:\Users\Cosmin\Documents\Visual Studio 2013\Projects\SecProject\SecProject\bin\Common.pdb
