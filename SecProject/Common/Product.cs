@@ -22,12 +22,12 @@ namespace Common
     {
         public string Name { get; set; }
         public string URI { get; set; }
-        public string Colour { get; set; }
+        public List<string> Colour { get; set; }
         public string Url { get; set; }
-        public string Brand { get; set; }
-        public string Gender { get; set; }
-        public string Season { get; set; }
-        public string Style { get; set; }
+        public List<string> Brand { get; set; }
+        public List<string> Gender { get; set; }
+        public List<string> Season { get; set; }
+        public List<string> Style { get; set; }
     }
 
 }

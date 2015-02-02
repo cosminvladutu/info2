@@ -15,7 +15,7 @@ namespace SecProject.BL
             Initialise();
             SecService = new SecService(Context);
 
-            var typeList = pop.PopulateProductTypes(Context);
+            var typeList = pop.PopulateProducts(Context);
 
             
             var resultsQuery =
