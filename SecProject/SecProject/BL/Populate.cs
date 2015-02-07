@@ -95,6 +95,28 @@ namespace SecProject.BL
                         p.Brand.Add(res["s"].ToString().Substring("http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#".Length));
                     }
                 }
+            var queryStyle = context.Query("PREFIX t: <http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#> SELECT ?ind ?s WHERE { ?ind t:Has_style ?s. ?ind rdf:type " + s.URI + " } ") as SparqlResultSet;
+            if (queryStyle != null)
+                foreach (var res in queryStyle.Results)
+                {
+                    var p = s.Products.FirstOrDefault(f => f.URI.ToLower() == res["ind"].ToString().ToLower());
+                    if (p != null)
+                    {
+                        p.Style.Add(res["s"].ToString().Substring("http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#".Length));
+                    }
+                }
+            var queryGender = context.Query("PREFIX t: <http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#> SELECT ?ind ?s WHERE { ?ind t:For_gender ?s. ?ind rdf:type " + s.URI + " } ") as SparqlResultSet;
+            if (queryGender != null)
+                foreach (var res in queryGender.Results)
+                {
+                    var p = s.Products.FirstOrDefault(f => f.URI.ToLower() == res["ind"].ToString().ToLower());
+                    if (p != null)
+                    {
+                        p.Gender.Add(res["s"].ToString().Substring("http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#".Length));
+                    }
+                }
         }
+
+
     }
 }

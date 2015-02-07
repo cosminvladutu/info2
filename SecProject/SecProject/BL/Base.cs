@@ -18,11 +18,11 @@ namespace SecProject.BL
             var typeList = pop.PopulateProducts(Context);
 
             
-            var resultsQuery =
-                Context.Query("SELECT * WHERE { ?subject rdfs:subClassOf <http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Dresses> . ?instance a ?subject . }")
-                    as SparqlResultSet;
+            //var resultsQuery =
+            //    Context.Query("SELECT * WHERE { ?subject rdfs:subClassOf <http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Dresses> . ?instance a ?subject . }")
+            //        as SparqlResultSet;
 
-            var ttt = resultsQuery.Results;
+            //var ttt = resultsQuery.Results;
 
         }
 

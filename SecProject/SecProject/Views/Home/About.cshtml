@@ -2,33 +2,64 @@
     ViewBag.Title = "About";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+
+
+<div>
+    <div class="btn-group">
+        <a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#">
+            <h3>Choose Child</h3>
+            <span class="right-caret right"></span>
+        </a>
+        <ul class="dropdown-menu rightMenu">
+            <li>
+                <div class="btn-group">
+                    <a href="parent_homepage_2.html" style="text-align: center; display: block;" class="btn btn-link operationsButtons">
+                        <h5>A</h5>
+
+                    </a>
+                    <a href="parent_homepage_2.html" style="text-align: center; display: block;" class="btn btn-link operationsButtons">
+                        <h5>J</h5>
+
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
 
 <article>
-    <p>
-        Use this area to provide additional information.
-    </p>
+        <p>
+            Use this area to provide additional information.
+        </p>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
+        <p>
+            Use this area to provide additional information.
+        </p>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
-</article>
+        <p>
+            Use this area to provide additional information.
+        </p>
+    </article>
 
-<aside>
-    <h3>Aside Title</h3>
-    <p>
-        Use this area to provide additional information.
-    </p>
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    </ul>
-</aside>
+    <aside>
+        <h3>Aside Title</h3>
+        <p>
+            Use this area to provide additional information.
+        </p>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </ul>
+    </aside>

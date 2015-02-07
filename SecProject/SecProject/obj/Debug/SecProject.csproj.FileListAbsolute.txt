@@ -15,12 +15,9 @@ c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\Microsoft.Web.WebPages.OAuth.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\Newtonsoft.Json.dll
-c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Net.Http.Formatting.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Spatial.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Helpers.dll
-c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Http.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Http.OData.dll
-c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Http.WebHost.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Mvc.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Optimization.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Razor.dll
@@ -32,10 +29,7 @@ c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\WebMatrix.WebData.dll
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\EntityFramework.xml
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\Newtonsoft.Json.xml
-c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Net.Http.Formatting.xml
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Helpers.xml
-c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Http.xml
-c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Http.WebHost.xml
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Mvc.xml
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.Razor.xml
 c:\users\cosmin\documents\visual studio 2013\Projects\SecProject\SecProject\bin\System.Web.WebPages.xml

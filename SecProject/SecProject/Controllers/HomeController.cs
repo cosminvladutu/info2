@@ -33,9 +33,15 @@ namespace SecProject.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact Information";
 
             return View();
+        }
+
+        public ActionResult ChangeActiveMenu(string activeMenuName)
+        {
+            Session["activeMenuItem"] = activeMenuName;
+            return View("About");
         }
     }
 }
