@@ -14,7 +14,7 @@ namespace SecProject.Models
             ProductTypes = pt;
             ProductsAndFilters=new ProductOntologyFilterModelViewModel();
             ProductsAndFilters.PopulateModel(pt,"","","","","");
-            ProductsAndFilters.PopulateProductListFull(pt);
+            ProductsAndFilters.PopulateProductListFull(pt, null);
         }
     }
 }

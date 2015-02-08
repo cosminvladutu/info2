@@ -528,6 +528,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Blue_Nile -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Blue_Nile">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Boots -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Boots">
@@ -681,9 +689,13 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Diamond">
         <rdf:type rdf:resource="&Adriana;Rings"/>
-        <Has_URL rdf:datatype="&xsd;string">http://www.bluenile.com/ro/build-your-own-ring/settings?track=TitleVintage</Has_URL>
+        <Has_buy_url rdf:datatype="&xsd;string">http://www.bluenile.com/ro/build-your-own-ring/sapphire-engagement-ring-platinum_8315?elem=img&amp;track=product</Has_buy_url>
+        <Has_URL>http://img.bluenile.com/is/image/bluenile/-sapphire-engagement-ring-platinum-/setting_template_main?$phab_detailmain$&amp;$diam_shape=is{bluenile/main_RD_standard_100}&amp;$diam_position=-20,-10&amp;$ring_position=0,0&amp;$ring_sku=is{bluenile/CM30500100_setmain}</Has_URL>
+        <has_id>5</has_id>
         <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Is_from rdf:resource="&Adriana;Blue_Nile"/>
         <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Silver"/>
     </owl:NamedIndividual>
     
 
@@ -867,7 +879,9 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Little_black_dress">
         <rdf:type rdf:resource="&Adriana;Little_black_dress"/>
-        <Has_URL rdf:datatype="&xsd;string">http://www.asos.com/Women/Dresses/Little-Black-Dresses/Cat/pgecategory.aspx?cid=9419&amp;affid=14183&amp;utm_source=google&amp;utm_medium=ppc&amp;utm_term=little%20black%20dress&amp;utm_content=&amp;utm_campaign=&amp;cvosrc=ppc.google.little%20black%20dress&amp;matchtype=e&amp;network=g&amp;mobile=&amp;search=1&amp;content=&amp;creative=52455251781&amp;channelref=paid+search&amp;keyword=little%20black%20dress&amp;adposition=1t1&amp;gclid=COqR9afRhMMCFU6WtAodAxsAdA</Has_URL>
+        <Has_buy_url rdf:datatype="&xsd;string">http://www.asos.com/ASOS/ASOS-90s-Skater-Dress-with-High-Neck/Prod/pgeproduct.aspx?iid=4969661&amp;cid=9419&amp;sh=0&amp;pge=0&amp;pgesize=36&amp;sort=-1&amp;clr=Black&amp;totalstyles=219&amp;gridsize=3</Has_buy_url>
+        <has_id>2</has_id>
+        <Has_URL>http://images.asos-media.com/inv/media/1/6/6/9/4969661/image4xl.jpg</Has_URL>
         <Is_from rdf:resource="&Adriana;Armani"/>
         <Is_from_season rdf:resource="&Adriana;Autumn"/>
         <Has_colour rdf:resource="&Adriana;Black"/>
@@ -1104,9 +1118,14 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Platinum">
         <rdf:type rdf:resource="&Adriana;Rings"/>
-        <Has_URL rdf:datatype="&xsd;string">http://www.gemvara.com/jewelry/antrim-band-6mm-wide/mens-platinum-ring/k0jh7</Has_URL>
+        <Has_buy_url rdf:datatype="&xsd;string">http://www.gemvara.com/jewelry/antrim-band-6mm-wide/mens-platinum-ring/k0jh7
+</Has_buy_url>
+        <has_id>6</has_id>
+        <Has_URL>http://sd2.gemvara.net/image-generator/PLD-MEN-UN-HM259-6-HP-SB/LD/-3/Plat/450/mens-platinum-ring.jpg</Has_URL>
         <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Is_from rdf:resource="&Adriana;Blue_Nile"/>
         <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Silver"/>
         <For_gender rdf:resource="&Adriana;Unisex"/>
     </owl:NamedIndividual>
     
@@ -1196,8 +1215,8 @@
     <owl:NamedIndividual rdf:about="&Adriana;Silver_Bead_Necklace">
         <rdf:type rdf:resource="&Adriana;Necklaces"/>
         <has_id>2</has_id>
+        <Has_buy_url>Silver Bead http://karika.co.uk/gb_uk/necklaces/Freshwater-Pearl-Silver-Bead-Necklace</Has_buy_url>
         <Has_URL>http://karika.co.uk/gb_uk/image/cache/data/N3393W-500x500.jpg</Has_URL>
-        <Has_buy_url>Silver Bead Necklace</Has_buy_url>
         <Has_style rdf:resource="&Adriana;Black_tie"/>
         <For_gender rdf:resource="&Adriana;Female"/>
         <Is_from rdf:resource="&Adriana;Meli_Melo"/>
@@ -1398,8 +1417,12 @@
     <owl:NamedIndividual rdf:about="&Adriana;Titanium">
         <rdf:type rdf:resource="&Adriana;Rings"/>
         <Has_URL rdf:datatype="&xsd;string">http://mariachiquinhaoficial.com/marvelous-pictures-of-black-wedding-ring-design-style/picturesque-black-titanium-wedding-rings-with-diamonds-affordable-black-wedding-ring-price/</Has_URL>
+        <has_id>7</has_id>
+        <Has_buy_url>http://mariachiquinhaoficial.com/wp-content/uploads/2014/11/design-wedding-rings-picturesque-black-titanium-wedding-rings-with-diamonds-affordable-black-wedding-ring-price-marvelous-pictures-of-black-wedding-ring-design-style-black-wedding-ring.jpg</Has_buy_url>
+        <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_style rdf:resource="&Adriana;Casual"/>
-        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <Is_from rdf:resource="&Adriana;Mineli_Boutique"/>
+        <Has_colour rdf:resource="&Adriana;Silver"/>
         <For_gender rdf:resource="&Adriana;Unisex"/>
     </owl:NamedIndividual>
     

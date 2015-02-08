@@ -27,7 +27,6 @@ namespace SecProject.BL
             }
             catch (Exception ex)
             {
-
                 throw;
             }
 
