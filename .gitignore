@@ -13,7 +13,11 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
 # Windows shortcuts
 *.lnk
 
