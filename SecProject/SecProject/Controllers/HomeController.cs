@@ -8,10 +8,10 @@ namespace SecProject.Controllers
 {
     public class HomeController : Controller
     {
-     //   public StardogConnector context;
+        //   public StardogConnector context;
         public static List<ProductType> ProductTypes;
- 
-     //   SecProject.BL.SecService service = new BL.SecService(context);
+
+        //   SecProject.BL.SecService service = new BL.SecService(context);
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
@@ -27,7 +27,7 @@ namespace SecProject.Controllers
         public ActionResult Products()
         {
             new Base().Initialise();
-          
+
             var productVM = new ProductViewModel();
             productVM.PopulateProductType(new Base().ReturnProductTypes());
 
@@ -42,9 +42,22 @@ namespace SecProject.Controllers
         }
 
 
-        public ActionResult DropDownFilterOnProducts(string selectedBrand,string selectedColour, string selectedGender,string selectedStyle, string selectedSeason)
+        public ActionResult DropDownFilterOnProducts(string selectedBrand, string selectedColour, string selectedGender, string selectedStyle, string selectedSeason)
         {
-            return PartialView("PartialViews/ProductsPartialView");
+            // var model = new List<ProductsToShow>();
+            var model = new ProductOntologyFilterModelViewModel();
+            model.PopulateModel(ProductTypes, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
+            model.PopulateProductListFull(ProductTypes, null, "", "", "", "", "");
+            return PartialView("PartialViews/ProductsPartialView", model.ProductList);
+        }
+
+        public ActionResult ChangeSubCategory(string subCateg)
+        {
+            var pofmVm = new ProductOntologyFilterModelViewModel();
+            pofmVm.PopulateModel(ProductTypes, "", "", "", "", "");
+            pofmVm.PopulateProductListFull(ProductTypes, subCateg, "", "", "", "", "");
+
+            return PartialView("PartialViews/ProductFilter", pofmVm);
         }
     }
 }

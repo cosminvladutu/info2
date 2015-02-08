@@ -56,7 +56,43 @@ namespace SecProject.Models
             Style.Items = Style.Items.OrderBy(t => t.Text).ToList();
         }
 
-        public void PopulateProductListFull(List<ProductType> pt, string subcategoryName)
+        public ProductInstance FilterProductInstance(string selectedBrand, string selectedColour, string selectedGender,
+            string selectedSeason, string selectedStyle, ProductInstance instance)
+        {
+            if (selectedBrand.ToUpper() != "ALL" && selectedBrand.ToUpper() != "")
+            {
+                if (instance.Brand.SingleOrDefault(t => t.Contains(selectedBrand)) == null)
+                {
+                    return null;
+                }
+            }
+            if (selectedColour.ToUpper() != "ALL" && selectedColour.ToUpper() != "")
+            {
+                if (instance.Colour.SingleOrDefault(t => t.Contains(selectedColour)) == null)
+                {
+                    return null;
+                }
+            }
+            if (selectedGender.ToUpper() != "ALL" && selectedGender.ToUpper() != "")
+            {
+                if (instance.Gender.SingleOrDefault(t => t.Contains(selectedGender)) == null)
+                {
+                    return null;
+                }
+            }
+            if (selectedSeason.ToUpper() != "ALL" && selectedSeason.ToUpper() != "")
+            {
+                if (instance.Season.SingleOrDefault(t => t.Contains(selectedSeason)) == null)
+                {
+                    return null;
+                }
+            }
+            if (selectedStyle.ToUpper() == "ALL" && selectedStyle.ToUpper() == "") return instance;
+            return instance.Style.SingleOrDefault(t => t.Contains(selectedStyle)) == null ? null : instance;
+        }
+
+        public void PopulateProductListFull(List<ProductType> pt, string subcategoryName, string selectedBrand, string selectedColour, string selectedGender,
+            string selectedSeason, string selectedStyle)
         {
             ProductList = new List<ProductsToShow>();
             foreach (var categ in pt)
@@ -67,13 +103,14 @@ namespace SecProject.Models
                     {
                         foreach (var prod in subcateg.Products)
                         {
+                            var instance = FilterProductInstance(selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, prod);
                             ProductList.Add(new ProductsToShow
                             {
-                                Name = prod.Name,
-                                ImgUrl = !String.IsNullOrEmpty(prod.Url) ? prod.Url : String.Empty,
+                                Name = instance.Name,
+                                ImgUrl = !String.IsNullOrEmpty(instance.Url) ? instance.Url : String.Empty,
                                 Categ = categ.CategoryName,
                                 SubCateg = subcateg.SubCategoryName,
-                                BuyUrl = !String.IsNullOrEmpty(prod.BuyUrl) ? prod.BuyUrl : String.Empty
+                                BuyUrl = !String.IsNullOrEmpty(instance.BuyUrl) ? instance.BuyUrl : String.Empty
                             });
                         }
                     }
@@ -84,18 +121,19 @@ namespace SecProject.Models
                     {
                         foreach (var prod in subcateg.Products)
                         {
+                            var instance = FilterProductInstance(selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, prod);
                             ProductList.Add(new ProductsToShow
                             {
-                                Name = prod.Name,
-                                ImgUrl = !String.IsNullOrEmpty(prod.Url) ? prod.Url : String.Empty,
+                                Name = instance.Name,
+                                ImgUrl = !String.IsNullOrEmpty(instance.Url) ? instance.Url : String.Empty,
                                 Categ = categ.CategoryName,
                                 SubCateg = subcateg.SubCategoryName,
-                                BuyUrl = !String.IsNullOrEmpty(prod.BuyUrl) ? prod.BuyUrl : String.Empty
+                                BuyUrl = !String.IsNullOrEmpty(instance.BuyUrl) ? instance.BuyUrl : String.Empty
                             });
                         }
                     }
                 }
-               
+
             }
         }
     }

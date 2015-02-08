@@ -98,3 +98,18 @@ $(document).ready(function () {
         });
     });
 });
+
+
+function changeSubcategory(subCateg) {
+
+    var url = $("#changeSubcategory").val();
+
+    $.ajax({
+        data: { subCateg: subCateg },
+        url: url,
+        type: 'GET',
+        success: function (data) {
+            $("#ProductAndFilters").html(data);
+        }
+    });
+};
