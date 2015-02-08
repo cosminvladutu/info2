@@ -1,0 +1,1487 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Adriana "http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#"
+     xml:base="http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Adriana="http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#For_gender -->
+
+    <owl:ObjectProperty rdf:about="&Adriana;For_gender">
+        <rdfs:range rdf:resource="&Adriana;Gender"/>
+        <rdfs:domain rdf:resource="&Adriana;Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Has_colour -->
+
+    <owl:ObjectProperty rdf:about="&Adriana;Has_colour">
+        <rdfs:range rdf:resource="&Adriana;Colour"/>
+        <rdfs:domain rdf:resource="&Adriana;Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Has_style -->
+
+    <owl:ObjectProperty rdf:about="&Adriana;Has_style">
+        <rdfs:range rdf:resource="&Adriana;Style"/>
+        <rdfs:domain rdf:resource="&Adriana;Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Is_from -->
+
+    <owl:ObjectProperty rdf:about="&Adriana;Is_from">
+        <rdfs:range rdf:resource="&Adriana;Brand"/>
+        <rdfs:domain rdf:resource="&Adriana;Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Is_from_season -->
+
+    <owl:ObjectProperty rdf:about="&Adriana;Is_from_season">
+        <rdfs:range rdf:resource="&Adriana;Season"/>
+        <rdfs:domain rdf:resource="&Adriana;Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Has_URL -->
+
+    <owl:DatatypeProperty rdf:about="&Adriana;Has_URL">
+        <rdfs:domain rdf:resource="&Adriana;Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Has_buy_url -->
+
+    <owl:DatatypeProperty rdf:about="&Adriana;Has_buy_url">
+        <rdfs:domain rdf:resource="&Adriana;Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#has_id -->
+
+    <owl:DatatypeProperty rdf:about="&Adriana;has_id">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&Adriana;ID"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Accessories -->
+
+    <owl:Class rdf:about="&Adriana;Accessories">
+        <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Animal_print -->
+
+    <owl:Class rdf:about="&Adriana;Animal_print">
+        <rdfs:subClassOf rdf:resource="&Adriana;Dresses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Basic_sweaters -->
+
+    <owl:Class rdf:about="&Adriana;Basic_sweaters">
+        <rdfs:subClassOf rdf:resource="&Adriana;Sweaters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Boots -->
+
+    <owl:Class rdf:about="&Adriana;Boots">
+        <rdfs:subClassOf rdf:resource="&Adriana;Shoes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Brand -->
+
+    <owl:Class rdf:about="&Adriana;Brand">
+        <rdfs:subClassOf rdf:resource="&Adriana;Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Clasic_fit -->
+
+    <owl:Class rdf:about="&Adriana;Clasic_fit">
+        <rdfs:subClassOf rdf:resource="&Adriana;Shirts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Colour -->
+
+    <owl:Class rdf:about="&Adriana;Colour">
+        <rdfs:subClassOf rdf:resource="&Adriana;Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Description -->
+
+    <owl:Class rdf:about="&Adriana;Description">
+        <rdfs:subClassOf rdf:resource="&Adriana;Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Dresses -->
+
+    <owl:Class rdf:about="&Adriana;Dresses">
+        <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Gender -->
+
+    <owl:Class rdf:about="&Adriana;Gender">
+        <rdfs:subClassOf rdf:resource="&Adriana;Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#High_heels -->
+
+    <owl:Class rdf:about="&Adriana;High_heels">
+        <rdfs:subClassOf rdf:resource="&Adriana;Shoes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#ID -->
+
+    <owl:Class rdf:about="&Adriana;ID">
+        <rdfs:subClassOf rdf:resource="&Adriana;Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Jeans -->
+
+    <owl:Class rdf:about="&Adriana;Jeans">
+        <rdfs:subClassOf rdf:resource="&Adriana;Pants"/>
+        <owl:disjointWith rdf:resource="&Adriana;Trousers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Little_black_dress -->
+
+    <owl:Class rdf:about="&Adriana;Little_black_dress">
+        <rdfs:subClassOf rdf:resource="&Adriana;Dresses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Long -->
+
+    <owl:Class rdf:about="&Adriana;Long">
+        <rdfs:subClassOf rdf:resource="&Adriana;Dresses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Maxi -->
+
+    <owl:Class rdf:about="&Adriana;Maxi">
+        <rdfs:subClassOf rdf:resource="&Adriana;Skirts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Midi -->
+
+    <owl:Class rdf:about="&Adriana;Midi">
+        <rdfs:subClassOf rdf:resource="&Adriana;Skirts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Mini -->
+
+    <owl:Class rdf:about="&Adriana;Mini">
+        <rdfs:subClassOf rdf:resource="&Adriana;Skirts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Necklaces -->
+
+    <owl:Class rdf:about="&Adriana;Necklaces">
+        <rdfs:subClassOf rdf:resource="&Adriana;Accessories"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Pants -->
+
+    <owl:Class rdf:about="&Adriana;Pants">
+        <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Polo -->
+
+    <owl:Class rdf:about="&Adriana;Polo">
+        <rdfs:subClassOf rdf:resource="&Adriana;Sweaters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Product -->
+
+    <owl:Class rdf:about="&Adriana;Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Rings -->
+
+    <owl:Class rdf:about="&Adriana;Rings">
+        <rdfs:subClassOf rdf:resource="&Adriana;Accessories"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Season -->
+
+    <owl:Class rdf:about="&Adriana;Season">
+        <rdfs:subClassOf rdf:resource="&Adriana;Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Shirts -->
+
+    <owl:Class rdf:about="&Adriana;Shirts">
+        <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Shoes -->
+
+    <owl:Class rdf:about="&Adriana;Shoes">
+        <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Skirts -->
+
+    <owl:Class rdf:about="&Adriana;Skirts">
+        <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Slim_fit -->
+
+    <owl:Class rdf:about="&Adriana;Slim_fit">
+        <rdfs:subClassOf rdf:resource="&Adriana;Shirts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Sport_shoes -->
+
+    <owl:Class rdf:about="&Adriana;Sport_shoes">
+        <rdfs:subClassOf rdf:resource="&Adriana;Shoes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Style -->
+
+    <owl:Class rdf:about="&Adriana;Style">
+        <rdfs:subClassOf rdf:resource="&Adriana;Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Sweaters -->
+
+    <owl:Class rdf:about="&Adriana;Sweaters">
+        <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Trousers -->
+
+    <owl:Class rdf:about="&Adriana;Trousers">
+        <rdfs:subClassOf rdf:resource="&Adriana;Pants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Type -->
+
+    <owl:Class rdf:about="&Adriana;Type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Watches -->
+
+    <owl:Class rdf:about="&Adriana;Watches">
+        <rdfs:subClassOf rdf:resource="&Adriana;Accessories"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Adidas -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Adidas">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Animal_print -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Animal_print">
+        <rdf:type rdf:resource="&Adriana;Animal_print"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.sammydress.com/Wholesale-Cute-Leopard-Dresses.html?odr=hot&amp;gclid=CK3JvfLQhMMCFW3ItAodFF8A-w</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <Has_colour rdf:resource="&Adriana;Female"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Animal_print1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Animal_print1">
+        <rdf:type rdf:resource="&Adriana;Animal_print"/>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Armani -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Armani">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Autumn -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Autumn">
+        <rdf:type rdf:resource="&Adriana;Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Basic_sweater1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Basic_sweater1">
+        <rdf:type rdf:resource="&Adriana;Basic_sweaters"/>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Basic_sweaters -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Basic_sweaters">
+        <rdf:type rdf:resource="&Adriana;Basic_sweaters"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.forever21.com/Product/Category.aspx?br=f21&amp;category=sweater_basic</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Black -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Black">
+        <rdf:type rdf:resource="&Adriana;Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Black_tie -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Black_tie">
+        <rdf:type rdf:resource="&Adriana;Style"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Blue -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Blue">
+        <rdf:type rdf:resource="&Adriana;Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Boots -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Boots">
+        <rdf:type rdf:resource="&Adriana;Boots"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.minelli.fr/femme/la-collection/boots</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;Mineli_Boutique"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Casual -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Casual">
+        <rdf:type rdf:resource="&Adriana;Style"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Christmas_Necklace -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Christmas_Necklace">
+        <rdf:type rdf:resource="&Adriana;Necklaces"/>
+        <Has_buy_url>http://melimeloparis.ro/produse/coliere/colier-auriu-cu-pandantiv-a01dtc0021866-cl14t.html</Has_buy_url>
+        <Has_URL>http://cdn3.melimeloparis.ro/thumb/1020x0/product/f1660158feccd725f2b8beff3f00254cb686faee.jpg</Has_URL>
+        <has_id>5</has_id>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Gold"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Clasic_fit -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Clasic_fit">
+        <rdf:type rdf:resource="&Adriana;Clasic_fit"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.asos.com/search/fitted-shirts?q=fitted%20shirts&amp;refine=floor:floor_1001,floor_1000&amp;currentpricerange=0-180&amp;pgesize=36</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Clasic_fit1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Clasic_fit1">
+        <rdf:type rdf:resource="&Adriana;Clasic_fit"/>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#D&amp;G -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;D&amp;G">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Daniel_Klein -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Daniel_Klein">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Daniel_Klein_Black_Watch -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Daniel_Klein_Black_Watch">
+        <rdf:type rdf:resource="&Adriana;Watches"/>
+        <Has_URL>http://www.elefant.ro/res/img/fashion/11/23/56/images/8680161171294_28_1.jpg?w=240&amp;h=301</Has_URL>
+        <has_id>2</has_id>
+        <Has_buy_url>http://www.elefant.ro/fashion/accesorii/ceasuri/quartz/ceas-daniel-klein-viiiviviiiiiviiiviiiiiixiv-negru-112356-28.html</Has_buy_url>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;Daniel_Klein"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Male"/>
+        <Has_colour rdf:resource="&Adriana;Silver"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Daniel_Klein_Golden_Watch -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Daniel_Klein_Golden_Watch">
+        <rdf:type rdf:resource="&Adriana;Watches"/>
+        <Has_buy_url>http://www.elefant.ro/fashion/accesorii/ceasuri/quartz/ceas-daniel-klein-viiiviviiiiiviiiiviviiiviiv-auriu-112176-23.html</Has_buy_url>
+        <Has_URL>http://www.elefant.ro/res/img/fashion/11/21/76/images/8680161116875_23_1.jpg?w=240&amp;h=301</Has_URL>
+        <has_id>3</has_id>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Is_from rdf:resource="&Adriana;Daniel_Klein"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Gold"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Daniel_Klein_Red_Watch -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Daniel_Klein_Red_Watch">
+        <rdf:type rdf:resource="&Adriana;Watches"/>
+        <has_id>1</has_id>
+        <Has_URL>http://www.elefant.ro/res/img/fashion/11/22/45/images/8680161171614_30_1.jpg?w=240&amp;h=301</Has_URL>
+        <Has_buy_url>http://www.elefant.ro/fashion/accesorii/ceasuri/quartz/ceas-daniel-klein-viiiviviiiiiviiiviiiviiiv-rosu-bordeaux-112245-129.html</Has_buy_url>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;Daniel_Klein"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Male"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Diamond -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Diamond">
+        <rdf:type rdf:resource="&Adriana;Rings"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.bluenile.com/ro/build-your-own-ring/settings?track=TitleVintage</Has_URL>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Disco -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Disco">
+        <rdf:type rdf:resource="&Adriana;Style"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Dogeared_Gold_Plated_Circle_Long_Y_Necklace -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Dogeared_Gold_Plated_Circle_Long_Y_Necklace">
+        <rdf:type rdf:resource="&Adriana;Necklaces"/>
+        <Has_URL>http://images.asos-media.com/inv/media/9/2/2/8/4898229/image4xl.jpg</Has_URL>
+        <Has_buy_url>http://www.asos.com/dogeared/dogeared-gold-plated-circle-long-y-necklace/prod/pgeproduct.aspx?iid=4898229&amp;clr=Gold&amp;SearchQuery=necklace+gold&amp;pgesize=36&amp;pge=1&amp;totalstyles=449&amp;gridsize=3&amp;gridrow=2&amp;gridcolumn=3&amp;r=2</Has_buy_url>
+        <has_id>3</has_id>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Gold"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Female -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Female">
+        <rdf:type rdf:resource="&Adriana;Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Gold -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Gold">
+        <rdf:type rdf:resource="&Adriana;Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Golden_MeliMelo_Ring -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Golden_MeliMelo_Ring">
+        <rdf:type rdf:resource="&Adriana;Rings"/>
+        <has_id>2</has_id>
+        <Has_buy_url>http://melimeloparis.ro/produse/inele-5/inel-auriu-statement-a04psy0140069-ms15v.html</Has_buy_url>
+        <Has_URL>http://cdn2.melimeloparis.ro/thumb/1020x0/product/d9a4b36a7bd99e6680cfeba2026428fe25cedc41.jpg</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Gold"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Golden_heart_MeliMelo_necklace -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Golden_heart_MeliMelo_necklace">
+        <rdf:type rdf:resource="&Adriana;Necklaces"/>
+        <Has_buy_url>http://melimeloparis.ro/produse/coliere-5/colier-cu-lant-auriu-si-inima-a01lee83369-2-cl15v.html</Has_buy_url>
+        <has_id>1</has_id>
+        <Has_URL>http://cdn4.melimeloparis.ro/thumb/1020x0/product/cae5b09fa42537c8735a2e5494cc5349d725fc23.jpg</Has_URL>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Gold"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Good_For_The_Sole -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Good_For_The_Sole">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Green -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Green">
+        <rdf:type rdf:resource="&Adriana;Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#High_heels -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;High_heels">
+        <rdf:type rdf:resource="&Adriana;High_heels"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/Ladies+Shoes/4160,default,sc.html?prefn1=Heel%20height&amp;prefv1=Medium|High&amp;fix&amp;spcl&amp;cm_mmc=Google+Adwords-_-Unisex+-+Footwear+-+Heel+-+Misc+-+RLSA-_-Heel+-+High+-+U-_-high+heels&amp;_$ja=cgid:16745292875|tsid:54104|cid:208436075|lid:16216851|nw:g|crid:50002072835|rnd:16129539232868356823|dvc:c|adp:1t1|mt:e</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Mineli_Boutique"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#High_heels1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;High_heels1">
+        <rdf:type rdf:resource="&Adriana;High_heels"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Mineli_Boutique"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#High_leg_riding_boots -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;High_leg_riding_boots">
+        <rdf:type rdf:resource="&Adriana;Boots"/>
+        <Has_URL>http://debenhams.scene7.com/is/image/Debenhams/050010331263?$V7PdpLarge$</Has_URL>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#High_waisted -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;High_waisted">
+        <rdf:type rdf:resource="&Adriana;Jeans"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.aliexpress.com/premium/high-waist-jeans.html?af=ppc&amp;isdl=y&amp;src=Google&amp;albch=Google&amp;albcp=Search_search-seokw&amp;albkw=high%20waist%20jeans_Others-Search-Product-AliExpress_none_none&amp;albag=pl_none_high%20waist%20jeans_product&amp;albmt=phrase&amp;albst=search-text&amp;albom=Others_None_20140306_Aliexpress&amp;creative=45153202756&amp;ptsid=1012000052644112&amp;crea=45153202756&amp;plac=&amp;netw=g&amp;device=c&amp;aff_short_key=UneMJZVf&amp;cv=1012000052644112&amp;gclid=CJrs49nShMMCFZLLtAodzVoAJA
+
+</Has_URL>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Leather -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Leather">
+        <rdf:type rdf:resource="&Adriana;Watches"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/Emporio+Armani+Classic+Leather+Mens+Watch/205723126,default,pd.html</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Little_black_dress -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Little_black_dress">
+        <rdf:type rdf:resource="&Adriana;Little_black_dress"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.asos.com/Women/Dresses/Little-Black-Dresses/Cat/pgecategory.aspx?cid=9419&amp;affid=14183&amp;utm_source=google&amp;utm_medium=ppc&amp;utm_term=little%20black%20dress&amp;utm_content=&amp;utm_campaign=&amp;cvosrc=ppc.google.little%20black%20dress&amp;matchtype=e&amp;network=g&amp;mobile=&amp;search=1&amp;content=&amp;creative=52455251781&amp;channelref=paid+search&amp;keyword=little%20black%20dress&amp;adposition=1t1&amp;gclid=COqR9afRhMMCFU6WtAodAxsAdA</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Little_black_dress1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Little_black_dress1">
+        <rdf:type rdf:resource="&Adriana;Little_black_dress"/>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Long -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Long">
+        <rdf:type rdf:resource="&Adriana;Long"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.promgirl.com/shop/styles_and_trends/long</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Is_from rdf:resource="&Adriana;Polo"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Long1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Long1">
+        <rdf:type rdf:resource="&Adriana;Long"/>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Male -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Male">
+        <rdf:type rdf:resource="&Adriana;Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Mango -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Mango">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Maxi -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Maxi">
+        <rdf:type rdf:resource="&Adriana;Maxi"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/women%27s+skirts/307,default,sc.html?prefn1=Style&amp;prefv1=Maxi%20Skirt&amp;fix&amp;sz=200&amp;spcl&amp;cm_mmc=Google+Adwords-_-Womenswear+-+Skirt+-+Maxi+-+RLSA-_-Maxi+-+Core+-+W-_-maxi+skirt&amp;_$ja=cgid:14415303768|tsid:55320|cid:209345208|lid:495736910|nw:g|crid:53843074248|rnd:16683681500949610027|dvc:c|adp:1t2|mt:e</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Maxi1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Maxi1">
+        <rdf:type rdf:resource="&Adriana;Maxi"/>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Mechanical -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Mechanical">
+        <rdf:type rdf:resource="&Adriana;Watches"/>
+        <Has_URL rdf:datatype="&xsd;string">http://rainbowled2007.en.made-in-china.com/product/lvLnAqHMbIVo/China-Fashion-Japan-Quartz-Chronograph-Wrist-Band-Watch-XM9002-.html</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Meli_Melo -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Meli_Melo">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Midi -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Midi">
+        <rdf:type rdf:resource="&Adriana;Midi"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.asos.com/Women/Skirts/Midi-Skirts/Cat/pgecategory.aspx?cid=12906&amp;affid=14183&amp;utm_source=google&amp;utm_medium=ppc&amp;utm_term=midi%20skirts&amp;utm_content=&amp;utm_campaign=&amp;cvosrc=ppc.google.midi%20skirts&amp;matchtype=e&amp;network=g&amp;mobile=&amp;search=1&amp;content=&amp;creative=52455218061&amp;channelref=paid+search&amp;keyword=midi%20skirts&amp;adposition=1t1&amp;gclid=CK2M2dLahMMCFTLJtAody1UALA</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Midi1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Midi1">
+        <rdf:type rdf:resource="&Adriana;Midi"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Mineli_Boutique -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Mineli_Boutique">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Mini -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Mini">
+        <rdf:type rdf:resource="&Adriana;Mini"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.forever21.com/Product/Category.aspx?br=f21&amp;category=bottom_skirt-mini</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Mini1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Mini1">
+        <rdf:type rdf:resource="&Adriana;Mini"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Motorola -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Motorola">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Office -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Office">
+        <rdf:type rdf:resource="&Adriana;Style"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Platinum -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Platinum">
+        <rdf:type rdf:resource="&Adriana;Rings"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.gemvara.com/jewelry/antrim-band-6mm-wide/mens-platinum-ring/k0jh7</Has_URL>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Polo -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Polo">
+        <rdf:type rdf:resource="&Adriana;Polo"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.ralphlauren.com/family/index.jsp?categoryId=1766235</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <For_gender rdf:resource="&Adriana;Male"/>
+        <Is_from rdf:resource="&Adriana;Midi"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Polo1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Polo1">
+        <rdf:type rdf:resource="&Adriana;Polo"/>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <For_gender rdf:resource="&Adriana;Male"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Red -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Red">
+        <rdf:type rdf:resource="&Adriana;Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Red_Beads_Necklace -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Red_Beads_Necklace">
+        <rdf:type rdf:resource="&Adriana;Necklaces"/>
+        <has_id>4</has_id>
+        <Has_URL>http://cdn4.melimeloparis.ro/thumb/1020x0/product/02d5e70e75abd46bb2db77649721dd2edbc0e48d.jpg</Has_URL>
+        <Has_buy_url>http://melimeloparis.ro/produse/coliere-5/colier-la-baza-gatului-rosu-din-margele-a01dtc0021856-cb14t.html</Has_buy_url>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Regular_waisted -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Regular_waisted">
+        <rdf:type rdf:resource="&Adriana;Jeans"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.veromoda.com/on/demandware.store/Sites-ROE-Site/en_GB/Search-Show?redirected=1&amp;cgid=vm-normal-waist&amp;forcecountry=GB&amp;forcebrand=vero-moda</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Silver -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Silver">
+        <rdf:type rdf:resource="&Adriana;Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Silver_Bead_Necklace -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Silver_Bead_Necklace">
+        <rdf:type rdf:resource="&Adriana;Necklaces"/>
+        <has_id>2</has_id>
+        <Has_URL>http://karika.co.uk/gb_uk/image/cache/data/N3393W-500x500.jpg</Has_URL>
+        <Has_buy_url>Silver Bead Necklace</Has_buy_url>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Silver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Silver_and_perl_MrliMelo_ring -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Silver_and_perl_MrliMelo_ring">
+        <rdf:type rdf:resource="&Adriana;Rings"/>
+        <Has_buy_url>http://melimeloparis.ro/produse/inele-5/inel-argintiu-cu-perla-ivoire-a04gay00666-1-cl14v.html</Has_buy_url>
+        <For_gender rdf:resource="&Adriana;Female"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Silver_ring -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Silver_ring">
+        <rdf:type rdf:resource="&Adriana;Rings"/>
+        <has_id>1</has_id>
+        <Has_buy_url>http://melimeloparis.ro/produse/inele-5/inel-argintiu-a04dtc0005731-nv14t.html</Has_buy_url>
+        <Has_URL>http://cdn4.melimeloparis.ro/thumb/1020x0/product/e4d171e10e9948182aa5b5aca7fdb6d5b8e1689e.jpg</Has_URL>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <Has_colour rdf:resource="&Adriana;Silver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Skinny -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Skinny">
+        <rdf:type rdf:resource="&Adriana;Jeans"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.aliexpress.com/premium/skinny-jeans.html?af=ppc&amp;isdl=y&amp;src=Google&amp;albch=Google&amp;albcp=Search_search-seokw&amp;albkw=skinny%20jeans_Others-Search-Product-AliExpress_none_none&amp;albag=pl_none_skinny%20jeans_product&amp;albmt=phrase&amp;albst=search-text&amp;albom=Others_None_20140306_Aliexpress&amp;creative=45152211556&amp;ptsid=1012000052642856&amp;crea=45152211556&amp;plac=&amp;netw=g&amp;device=c&amp;aff_short_key=UneMJZVf&amp;cv=1012000052642856&amp;gclid=CPrnvfnThMMCFQcewwod7oQAXA</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Slim_fit -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Slim_fit">
+        <rdf:type rdf:resource="&Adriana;Slim_fit"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/designer+shirts+for+men/204,default,sc.html?prefn1=Fit%20MW&amp;prefv1=Slim%20fit&amp;fix&amp;spcl&amp;cm_mmc=Google+Adwords-_-Menswear+-+Shirts+-+Fit+-+RLSA-_-Shirts+-+Slim+-+Fit-_-%2Bslim+%2Bfit+%2Bshirts&amp;_$ja=cgid:13377265866|tsid:55321|cid:214306026|lid:19894836133|nw:g|crid:50135611626|rnd:1460715575131223707|dvc:c|adp:1s1|mt:b</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Slim_fit1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Slim_fit1">
+        <rdf:type rdf:resource="&Adriana;Slim_fit"/>
+        <Has_URL>www.google.com
+</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Smartwatch_Moto_360_Black -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Smartwatch_Moto_360_Black">
+        <rdf:type rdf:resource="&Adriana;Watches"/>
+        <has_id>6</has_id>
+        <Has_URL>http://s3emagst.akamaized.net/products/827/826274/images/res_924d784002be0c97ed22d4ff59d02377.jpg</Has_URL>
+        <Has_buy_url>http://www.emag.ro/ceas-smartwatch-motorola-moto-360-black-97079/pd/DBRZ6BBBM/?ref=vp_fam</Has_buy_url>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <Is_from rdf:resource="&Adriana;Motorola"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Sport -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Sport">
+        <rdf:type rdf:resource="&Adriana;Style"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Sport_shoes -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Sport_shoes">
+        <rdf:type rdf:resource="&Adriana;Sport_shoes"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.global.adidas.com/training-shoes
+</Has_URL>
+        <Is_from rdf:resource="&Adriana;Adidas"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Sport_shoes1 -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Sport_shoes1">
+        <rdf:type rdf:resource="&Adriana;Sport_shoes"/>
+        <Is_from rdf:resource="&Adriana;Adidas"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Spring -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Spring">
+        <rdf:type rdf:resource="&Adriana;Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Steel -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Steel">
+        <rdf:type rdf:resource="&Adriana;Watches"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Straight_leg -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Straight_leg">
+        <rdf:type rdf:resource="&Adriana;Trousers"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/women%27s+trousers/311,default,sc.html?cm_mmc=Google+Adwords-_-Unisex+-+Trouser+-+Core+-+RLSA-_-Trouser+-+Core+-+U-_-trousers&amp;_$ja=cgid:14415303168|tsid:55320|cid:209341008|lid:96498444|nw:g|crid:65611078488|rnd:1766268662775514428|dvc:c|adp:1t1|mt:p#http://www.houseoffraser.co.uk/women%27s+trousers/311,default,sc.html?prefn1=Style&amp;prefv1=Straight%20leg&amp;ajaxsearchrefinement&amp;brandTab=0</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Summer -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Summer">
+        <rdf:type rdf:resource="&Adriana;Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Titanium -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Titanium">
+        <rdf:type rdf:resource="&Adriana;Rings"/>
+        <Has_URL rdf:datatype="&xsd;string">http://mariachiquinhaoficial.com/marvelous-pictures-of-black-wedding-ring-design-style/picturesque-black-titanium-wedding-rings-with-diamonds-affordable-black-wedding-ring-price/</Has_URL>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;Meli_Melo"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Unisex -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Unisex">
+        <rdf:type rdf:resource="&Adriana;Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#White -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;White">
+        <rdf:type rdf:resource="&Adriana;Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Wide_leg -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Wide_leg">
+        <rdf:type rdf:resource="&Adriana;Trousers"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/women%27s+trousers/311,default,sc.html?cm_mmc=Google+Adwords-_-Unisex+-+Trouser+-+Core+-+RLSA-_-Trouser+-+Core+-+U-_-trousers&amp;_$ja=cgid:14415303168|tsid:55320|cid:209341008|lid:96498444|nw:g|crid:65611078488|rnd:1766268662775514428|dvc:c|adp:1t1|mt:p#http://www.houseoffraser.co.uk/women%27s+trousers/311,default,sc.html?prefn1=Style&amp;prefv1=Wide%20leg&amp;ajaxsearchrefinement&amp;brandTab=0</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Winter -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Winter">
+        <rdf:type rdf:resource="&Adriana;Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Adriana;Accessories"/>
+            <rdf:Description rdf:about="&Adriana;Brand"/>
+            <rdf:Description rdf:about="&Adriana;Colour"/>
+            <rdf:Description rdf:about="&Adriana;Description"/>
+            <rdf:Description rdf:about="&Adriana;Dresses"/>
+            <rdf:Description rdf:about="&Adriana;Gender"/>
+            <rdf:Description rdf:about="&Adriana;ID"/>
+            <rdf:Description rdf:about="&Adriana;Pants"/>
+            <rdf:Description rdf:about="&Adriana;Season"/>
+            <rdf:Description rdf:about="&Adriana;Shirts"/>
+            <rdf:Description rdf:about="&Adriana;Shoes"/>
+            <rdf:Description rdf:about="&Adriana;Skirts"/>
+            <rdf:Description rdf:about="&Adriana;Style"/>
+            <rdf:Description rdf:about="&Adriana;Sweaters"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Adriana;Necklaces"/>
+            <rdf:Description rdf:about="&Adriana;Rings"/>
+            <rdf:Description rdf:about="&Adriana;Watches"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
