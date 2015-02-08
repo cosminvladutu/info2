@@ -56,25 +56,46 @@ namespace SecProject.Models
             Style.Items = Style.Items.OrderBy(t => t.Text).ToList();
         }
 
-        public void PopulateProductListFull(List<ProductType> pt)
+        public void PopulateProductListFull(List<ProductType> pt, string subcategoryName)
         {
             ProductList = new List<ProductsToShow>();
             foreach (var categ in pt)
             {
-                foreach (var subcateg in categ.SubCategories)
+                if (subcategoryName != null)
                 {
-                    foreach (var prod in subcateg.Products)
+                    foreach (var subcateg in categ.SubCategories.Where(f => f.SubCategoryName.ToUpper() == subcategoryName.ToUpper()))
                     {
-                        ProductList.Add(new ProductsToShow
+                        foreach (var prod in subcateg.Products)
                         {
-                            Name = prod.Name,
-                            ImgUrl = !String.IsNullOrEmpty(prod.Url) ? prod.Url : String.Empty,
-                            Categ = categ.CategoryName,
-                            SubCateg = subcateg.SubCategoryName,
-                            BuyUrl = !String.IsNullOrEmpty(prod.BuyUrl) ? prod.BuyUrl : String.Empty
-                        });
+                            ProductList.Add(new ProductsToShow
+                            {
+                                Name = prod.Name,
+                                ImgUrl = !String.IsNullOrEmpty(prod.Url) ? prod.Url : String.Empty,
+                                Categ = categ.CategoryName,
+                                SubCateg = subcateg.SubCategoryName,
+                                BuyUrl = !String.IsNullOrEmpty(prod.BuyUrl) ? prod.BuyUrl : String.Empty
+                            });
+                        }
                     }
                 }
+                else
+                {
+                    foreach (var subcateg in categ.SubCategories)
+                    {
+                        foreach (var prod in subcateg.Products)
+                        {
+                            ProductList.Add(new ProductsToShow
+                            {
+                                Name = prod.Name,
+                                ImgUrl = !String.IsNullOrEmpty(prod.Url) ? prod.Url : String.Empty,
+                                Categ = categ.CategoryName,
+                                SubCateg = subcateg.SubCategoryName,
+                                BuyUrl = !String.IsNullOrEmpty(prod.BuyUrl) ? prod.BuyUrl : String.Empty
+                            });
+                        }
+                    }
+                }
+               
             }
         }
     }
