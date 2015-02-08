@@ -1,34 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using VDS.RDF.Storage;
+using Common;
+using SecProject.BL;
+using SecProject.Models;
 
 namespace SecProject.Controllers
 {
     public class HomeController : Controller
     {
      //   public StardogConnector context;
-        
+        public static List<ProductType> ProductTypes;
+ 
      //   SecProject.BL.SecService service = new BL.SecService(context);
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            new BL.Base().Initialise();
-          
+            new Base().Initialise();
+            ProductTypes = new Base().ReturnProductTypes();
 
 
 
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Products()
         {
-            ViewBag.Message = "Your app description page.";
+            new Base().Initialise();
+          
+            var productVM = new ProductViewModel();
+            productVM.PopulateProductType(new Base().ReturnProductTypes());
 
-            return View();
+            return View("Products", productVM);
         }
 
         public ActionResult Contact()
@@ -38,10 +41,10 @@ namespace SecProject.Controllers
             return View();
         }
 
-        public ActionResult ChangeActiveMenu(string activeMenuName)
+
+        public ActionResult DropDownFilterOnProducts(string selectedBrand,string selectedColour, string selectedGender,string selectedStyle, string selectedSeason)
         {
-            Session["activeMenuItem"] = activeMenuName;
-            return View("About");
+            return PartialView("PartialViews/ProductsPartialView");
         }
     }
 }

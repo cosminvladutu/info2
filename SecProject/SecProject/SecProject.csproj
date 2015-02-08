@@ -196,6 +196,7 @@
     <Compile Include="BL\Base.cs" />
     <Compile Include="BL\Factory.cs" />
     <Compile Include="BL\ISecService.cs" />
+    <Compile Include="BL\ModelHelper.cs" />
     <Compile Include="BL\Populate.cs" />
     <Compile Include="BL\SecService.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -206,6 +207,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\EnumerableDropDownViewModel.cs" />
+    <Compile Include="Models\ProductOntologyFilterModelViewModel.cs" />
+    <Compile Include="Models\ProductsToShow.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -277,6 +282,7 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\FilterOnProducts.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
@@ -289,13 +295,14 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\jQueryFunctionality.js" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\Map.js" />
     <Content Include="Scripts\Map2.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -327,13 +334,16 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\PartialViews\ProductFilter.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\EnumerableDropDownViewModel.cshtml" />
+    <Content Include="Views\Home\PartialViews\ProductsPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

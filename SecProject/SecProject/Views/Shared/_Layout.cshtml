@@ -26,7 +26,8 @@
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Products", "About", "Home")</li>
+                            <li>@Html.ActionLink("Products", "Products", "Home")</li>
+                            <li>@Html.ActionLink("What to wear?", "Products", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         </ul>
                     </nav>
@@ -35,9 +36,9 @@
         </header>
         <div id="body">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
+            @*<section class="content-wrapper main-content clear-fix">*@
                 @RenderBody()
-            </section>
+            @*</section>*@
         </div>
         <footer>
             <div class="content-wrapper">

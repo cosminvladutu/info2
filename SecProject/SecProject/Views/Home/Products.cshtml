@@ -1,0 +1,87 @@
+﻿@model SecProject.Models.ProductViewModel
+
+
+@Html.Hidden("onDropDownChangeOnProductsFilter", Url.Action("DropDownFilterOnProducts", "Home"))
+<script src="~/Scripts/FilterOnProducts.js" type="text/javascript"></script>
+
+
+
+@*@using (Html.BeginForm(null, null, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()*@
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        @foreach (var prod in Model.ProductTypes)
+        {
+
+            <div>
+                <div class="btn-group">
+                    <a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        <h3>@prod.CategoryName</h3>
+                        <span class="right-caret right"></span>
+                    </a>
+                    <ul class="dropdown-menu rightMenu">
+                        <li>
+                            <div class="btn-group">
+                                @foreach (var subCateg in prod.SubCategories)
+                                {
+
+                                    <a href="parent_homepage_2.html" style="text-align: center; display: block;" class="btn btn-link operationsButtons">
+                                        <h5>@subCateg.SubCategoryName</h5>
+
+                                    </a>
+                                }
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        }
+    </div>
+
+
+    <div class="col-md-9">
+        @{
+            Html.RenderPartial("PartialViews/ProductFilter", Model.ProductsAndFilters);
+        }
+    </div>
+</div>
+
+
+
+
+
+
+
+    @*<article>
+        <p>
+            Use this area to provide additional information.
+        </p>
+
+        <p>
+            Use this area to provide additional information.
+        </p>
+
+        <p>
+            Use this area to provide additional information.
+        </p>
+    </article>
+
+    <aside>
+        <h3>Aside Title</h3>
+        <p>
+            Use this area to provide additional information.
+        </p>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </ul>
+    </aside>
+@*}}*@

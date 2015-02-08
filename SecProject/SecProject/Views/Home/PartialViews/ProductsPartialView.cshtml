@@ -1,0 +1,19 @@
+﻿@model List<SecProject.Models.ProductsToShow>
+
+
+
+
+<table>
+    @for(var i=0;i<Model.Count;i++)
+    {
+        
+        <tr>
+            <td>
+                <img src="@Url.Content(Model[i].ImgUrl)" style="height: 200px" alt="Image"/>
+                <div style="margin-top: 3px" align="center">
+                    <a class="btn btn-danger btn-sm">Where to buy</a>
+                    <a class="btn btn-success btn-sm">Add to wordrobe</a>
+                </div>
+            </td>
+}
+</table>

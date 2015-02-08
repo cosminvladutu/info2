@@ -24,6 +24,7 @@ namespace Common
         public string URI { get; set; }
         public List<string> Colour { get; set; }
         public string Url { get; set; }
+        public string  BuyUrl { get; set; }
         public List<string> Brand { get; set; }
         public List<string> Gender { get; set; }
         public List<string> Season { get; set; }
