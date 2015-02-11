@@ -47,7 +47,7 @@ namespace SecProject.Controllers
             // var model = new List<ProductsToShow>();
             var model = new ProductOntologyFilterModelViewModel();
             model.PopulateModel(ProductTypes, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
-            model.PopulateProductListFull(ProductTypes, null, "", "", "", "", "");
+            model.PopulateProductListFull(ProductTypes, null,selectedBrand,selectedColour,selectedGender,selectedSeason,selectedStyle);
             return PartialView("PartialViews/ProductsPartialView", model.ProductList);
         }
 

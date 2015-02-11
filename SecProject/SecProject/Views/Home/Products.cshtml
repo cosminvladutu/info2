@@ -6,33 +6,33 @@
 
 <div class="row">
     <div class="col-md-3">
-        @foreach (var prod in Model.ProductTypes)
-        {
+        <div class="col-md-9">
+            @foreach (var prod in Model.ProductTypes)
+            {
+                <div class="panel-group" id="accordion" style="margin-top: 20px">
 
-            <div>
-                <div class="btn-group">
-                    <a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#">
-                        <h3>@prod.CategoryName</h3>
-                        <span class="right-caret right"></span>
-                    </a>
-                    <ul class="dropdown-menu rightMenu">
-                        <li>
-                            <div class="btn-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse_@prod.CategoryName">@prod.CategoryName</a>
+                            </h4>
+                        </div>
+                        <div id="collapse_@prod.CategoryName" class="panel-collapse collapse">
+                            <div class="panel-body">
                                 @foreach (var subCateg in prod.SubCategories)
                                 {
-                                    <a onclick="changeSubcategory(@subCateg.SubCategoryName)" style="text-align: center; display: block;" class="btn btn-link operationsButtons">
+
+                                    <a onclick="changeSubcategory('@subCateg.SubCategoryName') " style="text-align: center; display: block;" class="btn btn-link operationsButtons">
                                         <h5>@subCateg.SubCategoryName</h5>
                                     </a>
                                 }
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
 
-
-            </div>
-
-        }
+            }
+        </div>
     </div>
 
 
