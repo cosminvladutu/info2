@@ -81,5 +81,14 @@ namespace SecProject.Controllers
 
             return View("MyWardrobe", productVM);
         }
+
+        public ActionResult ChangeSubCategoryOnWardrobe(string subCateg)
+        {
+            var pofmVm = new ProductOntologyFilterModelViewModel();
+            pofmVm.PopulateModel(ProductTypes, "", "", "", "", "");
+            pofmVm.PopulateProductListFull(ProductTypes, subCateg, "", "", "", "", "");
+
+            return PartialView("PartialViews/ProductFilterInWardrobe", pofmVm);
+        }
     }
 }

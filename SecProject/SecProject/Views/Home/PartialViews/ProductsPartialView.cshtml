@@ -5,15 +5,15 @@
 }
 <table>
     @for (int index = 0; index < list.Count(); index++)
+{
+    if (index % 3 == 0)
     {
-        if (index % 3 == 0)
-        {
-            <tr>
+        <tr> </tr>
                 <td>
                     @if (!String.IsNullOrWhiteSpace(list[index].ImgUrl))
                     {
                         <img src="@Url.Content(list[index].ImgUrl)" style="height: 250px" alt="Image" />
-                        <div style="margin-bottom: 3px; margin-top: 3px" align="center">
+                        <div style="margin-bottom: 3px; margin-top: 3px; margin-right: 3px; margin-left: 3px" align="center">
                             <a href=@list[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -30,7 +30,7 @@
                         </div>
                     }
                 </td>
-            </tr>
+           
         }
         else
         {
@@ -38,7 +38,7 @@
                 @if (!String.IsNullOrWhiteSpace(list[index].ImgUrl))
                     {
                         <img src="@Url.Content(list[index].ImgUrl)" style="height: 250px" alt="Image" />
-                        <div style="margin-bottom: 3px; margin-top: 3px" align="center">
+                        <div style="margin-bottom: 3px; margin-top: 3px; margin-right: 3px; margin-left: 3px" align="center">
                             <a href=@list[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
                             @if (User.Identity.IsAuthenticated)
                             {

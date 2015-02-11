@@ -17,28 +17,28 @@
     {
         if (index % 3 == 0)
         {
-            <tr>
-                <td>
-                    @if (!String.IsNullOrWhiteSpace(filteredList[index].ImgUrl))
-                    {
+            <tr></tr>
+            <td>
+                @if (!String.IsNullOrWhiteSpace(filteredList[index].ImgUrl))
+                {
 
-                            <img src="@Url.Content(filteredList[index].ImgUrl)" style="height: 250px" alt="Image" />
-                            <div style="margin-bottom: 3px; margin-top: 3px" align="center">
-                                <a href=@filteredList[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
-                            </div>
-                    }
-                </td>
-            </tr>
+                    <img src="@Url.Content(filteredList[index].ImgUrl)" style="height: 250px" alt="Image" />
+                    <div style="margin-bottom: 3px; margin-top: 3px; margin-right: 3px; margin-left: 3px" align="center">
+                        <a href=@filteredList[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
+                    </div>
+                }
+            </td>
+
         }
         else
         {
             <td>
                 @if (!String.IsNullOrWhiteSpace(filteredList[index].ImgUrl))
                 {
-                        <img src="@Url.Content(filteredList[index].ImgUrl)" style="height: 250px" alt="Image" />
-                        <div style="margin-bottom: 3px; margin-top: 3px" align="center">
-                            <a href=@filteredList[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
-                        </div>
+                    <img src="@Url.Content(filteredList[index].ImgUrl)" style="height: 250px" alt="Image" />
+                    <div style="margin-bottom: 3px; margin-top: 3px; margin-right: 3px; margin-left: 3px; " align="center">
+                        <a href=@filteredList[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
+                    </div>
                 }
             </td>
         }
