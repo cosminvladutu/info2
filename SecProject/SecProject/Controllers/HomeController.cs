@@ -90,5 +90,10 @@ namespace SecProject.Controllers
 
             return PartialView("PartialViews/ProductFilterInWardrobe", pofmVm);
         }
+
+        public ActionResult WhatToWear()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -131,7 +131,6 @@ namespace SecProject.Models
                         FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, list);
                     }
                 }
-
             }
         }
 
