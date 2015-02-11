@@ -1018,10 +1018,8 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;High_waisted">
         <rdf:type rdf:resource="&Adriana;Jeans"/>
-        <Has_buy_url rdf:datatype="&xsd;string">http://www.aliexpress.com/premium/high-waist-jeans.html?af=ppc&amp;isdl=y&amp;src=Google&amp;albch=Google&amp;albcp=Search_search-seokw&amp;albkw=high%20waist%20jeans_Others-Search-Product-AliExpress_none_none&amp;albag=pl_none_high%20waist%20jeans_product&amp;albmt=phrase&amp;albst=search-text&amp;albom=Others_None_20140306_Aliexpress&amp;creative=45153202756&amp;ptsid=1012000052644112&amp;crea=45153202756&amp;plac=&amp;netw=g&amp;device=c&amp;aff_short_key=UneMJZVf&amp;cv=1012000052644112&amp;gclid=CJrs49nShMMCFZLLtAodzVoAJA
-
-</Has_buy_url>
-        <Has_URL>http://img.alibaba.com/wsphoto/v0/32212900155_1/2014_autumn_high_waist_jeans_female_skinny_pants_tight_fitting_plus_size_ultra_elastic_pencil_pants_trousers.summ.jpg</Has_URL>
+        <Has_buy_url rdf:datatype="&xsd;string">http://www.originals.ro/blugi-femei-puma-straight-fit-55758701-pret-100-150-p-7668.html</Has_buy_url>
+        <Has_URL>http://www.originals.ro/images/_110_110/2014/11/24/blugi-femei-puma-straight-fit-55758701-7668-1_110_110.jpg</Has_URL>
         <has_id>2</has_id>
         <Is_from_season rdf:resource="&Adriana;Autumn"/>
         <Has_colour rdf:resource="&Adriana;Black"/>
@@ -1031,6 +1029,7 @@
         <For_gender rdf:resource="&Adriana;Female"/>
         <Has_colour rdf:resource="&Adriana;Green"/>
         <Is_from rdf:resource="&Adriana;Mango"/>
+        <Is_from rdf:resource="&Adriana;Puma"/>
         <Is_from_season rdf:resource="&Adriana;Winter"/>
     </owl:NamedIndividual>
     
@@ -1040,9 +1039,9 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Leather">
         <rdf:type rdf:resource="&Adriana;Watches"/>
-        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/Emporio+Armani+Classic+Leather+Mens+Watch/205723126,default,pd.html</Has_URL>
-        <Has_buy_url>http://houseoffraser.scene7.com/is/image/HOF/I_150271432_50_20110825?size=140,186&amp;wid=140&amp;hei=186</Has_buy_url>
+        <Has_buy_url rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/Emporio+Armani+Classic+Leather+Mens+Watch/205723126,default,pd.html</Has_buy_url>
         <has_id>4</has_id>
+        <Has_URL>http://houseoffraser.scene7.com/is/image/HOF/I_150271432_50_20110825?size=140,186&amp;wid=140&amp;hei=186</Has_URL>
         <Is_from rdf:resource="&Adriana;Armani"/>
         <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_colour rdf:resource="&Adriana;Blue"/>
@@ -1393,8 +1392,8 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Regular_waisted">
         <rdf:type rdf:resource="&Adriana;Jeans"/>
-        <Has_URL rdf:datatype="&xsd;string">http://demandware.edgesuite.net/aagb_prd/on/demandware.static/Sites-ROE-Site/Sites-pim-catalog/en_GB/v1423645521622/pim-static/main/10127379_DarkBlueDenim_001_Main.jpg</Has_URL>
-        <Has_buy_url>www.veromoda.com/vero-moda/jeans/vmbay-nw-bootcut-jeans-ba566/10127379,en_GB,pd.html?dwvar_10127379_colorPattern=10127379_DarkBlueDenim&amp;forceScope=</Has_buy_url>
+        <Has_URL rdf:datatype="&xsd;string">http://www.originals.ro/images/_110_110/2014/09/23/blugi-barbati-ecko-unlimited-tribeca-jean-relaxed-fit-is1235353-8049-1_110_110.jpg</Has_URL>
+        <Has_buy_url>http://www.originals.ro/blugi-barbati-ecko-unlimited-tribeca-jean-relaxed-fit-is12-35353-pret-150-200-p-8049.html</Has_buy_url>
         <has_id>2</has_id>
         <Has_colour rdf:resource="&Adriana;Blue"/>
         <Has_style rdf:resource="&Adriana;Casual"/>
@@ -1628,10 +1627,13 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Straight_leg">
         <rdf:type rdf:resource="&Adriana;Trousers"/>
-        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/women%27s+trousers/311,default,sc.html?cm_mmc=Google+Adwords-_-Unisex+-+Trouser+-+Core+-+RLSA-_-Trouser+-+Core+-+U-_-trousers&amp;_$ja=cgid:14415303168|tsid:55320|cid:209341008|lid:96498444|nw:g|crid:65611078488|rnd:1766268662775514428|dvc:c|adp:1t1|mt:p#http://www.houseoffraser.co.uk/women%27s+trousers/311,default,sc.html?prefn1=Style&amp;prefv1=Straight%20leg&amp;ajaxsearchrefinement&amp;brandTab=0</Has_URL>
+        <Has_URL rdf:datatype="&xsd;string">http://www.originals.ro/images/_110_110/2014/09/17/pantaloni-femei-converse-awk-gf-core-fleece-rib-08834c410-11561-1_110_110.jpg</Has_URL>
+        <Has_buy_url>http://www.originals.ro/pantaloni-femei-converse-awk-gf-core-fleece-rib-08834c-410-pret-200-250-p-11561.html</Has_buy_url>
+        <has_id>3</has_id>
         <Is_from rdf:resource="&Adriana;Armani"/>
         <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Is_from rdf:resource="&Adriana;Converse"/>
         <Is_from rdf:resource="&Adriana;D&amp;G"/>
         <Is_from rdf:resource="&Adriana;Mango"/>
         <Has_style rdf:resource="&Adriana;Office"/>
@@ -1654,9 +1656,9 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Titanium">
         <rdf:type rdf:resource="&Adriana;Rings"/>
-        <Has_URL rdf:datatype="&xsd;string">http://mariachiquinhaoficial.com/marvelous-pictures-of-black-wedding-ring-design-style/picturesque-black-titanium-wedding-rings-with-diamonds-affordable-black-wedding-ring-price/</Has_URL>
+        <Has_buy_url rdf:datatype="&xsd;string">http://mariachiquinhaoficial.com/marvelous-pictures-of-black-wedding-ring-design-style/picturesque-black-titanium-wedding-rings-with-diamonds-affordable-black-wedding-ring-price/</Has_buy_url>
         <has_id>7</has_id>
-        <Has_buy_url>http://mariachiquinhaoficial.com/wp-content/uploads/2014/11/design-wedding-rings-picturesque-black-titanium-wedding-rings-with-diamonds-affordable-black-wedding-ring-price-marvelous-pictures-of-black-wedding-ring-design-style-black-wedding-ring.jpg</Has_buy_url>
+        <Has_URL>http://mariachiquinhaoficial.com/wp-content/uploads/2014/11/design-wedding-rings-picturesque-black-titanium-wedding-rings-with-diamonds-affordable-black-wedding-ring-price-marvelous-pictures-of-black-wedding-ring-design-style-black-wedding-ring.jpg</Has_URL>
         <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_style rdf:resource="&Adriana;Casual"/>
         <Is_from rdf:resource="&Adriana;Mineli_Boutique"/>
@@ -1772,11 +1774,14 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Wide_leg">
         <rdf:type rdf:resource="&Adriana;Trousers"/>
-        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/women%27s+trousers/311,default,sc.html?cm_mmc=Google+Adwords-_-Unisex+-+Trouser+-+Core+-+RLSA-_-Trouser+-+Core+-+U-_-trousers&amp;_$ja=cgid:14415303168|tsid:55320|cid:209341008|lid:96498444|nw:g|crid:65611078488|rnd:1766268662775514428|dvc:c|adp:1t1|mt:p#http://www.houseoffraser.co.uk/women%27s+trousers/311,default,sc.html?prefn1=Style&amp;prefv1=Wide%20leg&amp;ajaxsearchrefinement&amp;brandTab=0</Has_URL>
-        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_URL rdf:datatype="&xsd;string">http://www.originals.ro/images/_110_110/2014/11/18/pantaloni-femei-converse-basic-pant-new-logo-122w04-8263-1_110_110.jpg</Has_URL>
+        <Has_buy_url>http://www.originals.ro/pantaloni-femei-converse-basic-pant-new-logo-122w04-pret-100-150-p-8263.html</Has_buy_url>
+        <has_id>7</has_id>
         <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;Converse"/>
         <Is_from rdf:resource="&Adriana;D&amp;G"/>
         <Has_style rdf:resource="&Adriana;Office"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
         <Is_from_season rdf:resource="&Adriana;Summer"/>
         <For_gender rdf:resource="&Adriana;Unisex"/>
     </owl:NamedIndividual>
