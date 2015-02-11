@@ -81,6 +81,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#Season_SelectedItem").change(function () {
+        alert("season");
         var url = $('#onDropDownChangeOnProductsFilter').val();
         var selectedBrand = $("#Brand_SelectedItem :selected").val();
         var selectedColour = $("#Colour_SelectedItem :selected").val();

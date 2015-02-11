@@ -29,7 +29,8 @@ namespace SecProject.Controllers
             new Base().Initialise();
 
             var productVM = new ProductViewModel();
-            productVM.PopulateProductType(new Base().ReturnProductTypes());
+            //productVM.PopulateProductType(new Base().ReturnProductTypes());
+            productVM.PopulateProductType(ProductTypes);
 
             return View("Products", productVM);
         }
