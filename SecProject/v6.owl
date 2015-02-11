@@ -225,14 +225,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Little_black_dress -->
-
-    <owl:Class rdf:about="&Adriana;Little_black_dress">
-        <rdfs:subClassOf rdf:resource="&Adriana;Dresses"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Long -->
 
     <owl:Class rdf:about="&Adriana;Long">
@@ -307,6 +299,14 @@
 
     <owl:Class rdf:about="&Adriana;Shoes">
         <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Short_Dress -->
+
+    <owl:Class rdf:about="&Adriana;Short_Dress">
+        <rdfs:subClassOf rdf:resource="&Adriana;Dresses"/>
     </owl:Class>
     
 
@@ -1058,43 +1058,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Little_black_dress -->
-
-    <owl:NamedIndividual rdf:about="&Adriana;Little_black_dress">
-        <Has_buy_url rdf:datatype="&xsd;string">http://www.asos.com/ASOS/ASOS-90s-Skater-Dress-with-High-Neck/Prod/pgeproduct.aspx?iid=4969661&amp;cid=9419&amp;sh=0&amp;pge=0&amp;pgesize=36&amp;sort=-1&amp;clr=Black&amp;totalstyles=219&amp;gridsize=3</Has_buy_url>
-        <has_id>2</has_id>
-        <Has_URL>http://images.asos-media.com/inv/media/1/6/6/9/4969661/image4xl.jpg</Has_URL>
-        <Is_from rdf:resource="&Adriana;Armani"/>
-        <Is_from_season rdf:resource="&Adriana;Autumn"/>
-        <Has_colour rdf:resource="&Adriana;Black"/>
-        <Has_style rdf:resource="&Adriana;Black_tie"/>
-        <Is_from rdf:resource="&Adriana;D&amp;G"/>
-        <For_gender rdf:resource="&Adriana;Female"/>
-        <Is_from rdf:resource="&Adriana;Mango"/>
-        <Is_from_season rdf:resource="&Adriana;Summer"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Little_black_dress1 -->
-
-    <owl:NamedIndividual rdf:about="&Adriana;Little_black_dress1">
-        <rdf:type rdf:resource="&Adriana;Little_black_dress"/>
-        <Is_from rdf:resource="&Adriana;Armani"/>
-        <Has_colour rdf:resource="&Adriana;Black"/>
-        <Has_style rdf:resource="&Adriana;Black_tie"/>
-        <Has_colour rdf:resource="&Adriana;Blue"/>
-        <Has_style rdf:resource="&Adriana;Casual"/>
-        <For_gender rdf:resource="&Adriana;Female"/>
-        <Has_colour rdf:resource="&Adriana;Green"/>
-        <Is_from rdf:resource="&Adriana;Mango"/>
-        <Has_style rdf:resource="&Adriana;Office"/>
-        <Has_colour rdf:resource="&Adriana;Red"/>
-        <Is_from_season rdf:resource="&Adriana;Spring"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Long -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Long">
@@ -1440,6 +1403,43 @@
         <Is_from_season rdf:resource="&Adriana;Spring"/>
         <Is_from_season rdf:resource="&Adriana;Summer"/>
         <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Short_Dress -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Short_Dress">
+        <Has_buy_url rdf:datatype="&xsd;string">http://www.asos.com/ASOS/ASOS-90s-Skater-Dress-with-High-Neck/Prod/pgeproduct.aspx?iid=4969661&amp;cid=9419&amp;sh=0&amp;pge=0&amp;pgesize=36&amp;sort=-1&amp;clr=Black&amp;totalstyles=219&amp;gridsize=3</Has_buy_url>
+        <Has_URL>http://images.asos-media.com/inv/media/1/6/6/9/4969661/image4xl.jpg</Has_URL>
+        <has_id>2</has_id>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Is_from rdf:resource="&Adriana;D&amp;G"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Short_High_Neck_Lace_Dress -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Short_High_Neck_Lace_Dress">
+        <rdf:type rdf:resource="&Adriana;Short_Dress"/>
+        <has_id>2</has_id>
+        <Has_buy_url>http://www.simplydresses.com/shop/viewitem-PD965033</Has_buy_url>
+        <Has_URL>http://static14.jassets.com/p/The-Vanca-Knit-Black-Dress-6715-713457-1-catalog.jpg</Has_URL>
+        <Is_from rdf:resource="&Adriana;Armani"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Mango"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
     </owl:NamedIndividual>
     
 
@@ -1810,14 +1810,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&Adriana;Necklaces"/>
-            <rdf:Description rdf:about="&Adriana;Rings"/>
-            <rdf:Description rdf:about="&Adriana;Watches"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&Adriana;Accessories"/>
             <rdf:Description rdf:about="&Adriana;Brand"/>
             <rdf:Description rdf:about="&Adriana;Colour"/>
@@ -1832,6 +1824,14 @@
             <rdf:Description rdf:about="&Adriana;Skirts"/>
             <rdf:Description rdf:about="&Adriana;Style"/>
             <rdf:Description rdf:about="&Adriana;Sweaters"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Adriana;Necklaces"/>
+            <rdf:Description rdf:about="&Adriana;Rings"/>
+            <rdf:Description rdf:about="&Adriana;Watches"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
