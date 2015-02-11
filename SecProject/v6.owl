@@ -215,6 +215,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Hoodie -->
+
+    <owl:Class rdf:about="&Adriana;Hoodie">
+        <rdfs:subClassOf rdf:resource="&Adriana;Sweaters"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#ID -->
 
     <owl:Class rdf:about="&Adriana;ID">
@@ -248,17 +256,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Maxi -->
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Long_Skirts -->
 
-    <owl:Class rdf:about="&Adriana;Maxi">
-        <rdfs:subClassOf rdf:resource="&Adriana;Skirts"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Midi -->
-
-    <owl:Class rdf:about="&Adriana;Midi">
+    <owl:Class rdf:about="&Adriana;Long_Skirts">
         <rdfs:subClassOf rdf:resource="&Adriana;Skirts"/>
     </owl:Class>
     
@@ -284,14 +284,6 @@
 
     <owl:Class rdf:about="&Adriana;Pants">
         <rdfs:subClassOf rdf:resource="&Adriana;Type"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Polo -->
-
-    <owl:Class rdf:about="&Adriana;Polo">
-        <rdfs:subClassOf rdf:resource="&Adriana;Sweaters"/>
     </owl:Class>
     
 
@@ -459,6 +451,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Asics -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Asics">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Autumn -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Autumn">
@@ -470,7 +470,6 @@
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Basic_sweater1 -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Basic_sweater1">
-        <rdf:type rdf:resource="&Adriana;Basic_sweaters"/>
         <Is_from_season rdf:resource="&Adriana;Autumn"/>
         <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_colour rdf:resource="&Adriana;Blue"/>
@@ -487,7 +486,6 @@
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Basic_sweaters -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Basic_sweaters">
-        <rdf:type rdf:resource="&Adriana;Basic_sweaters"/>
         <Has_URL rdf:datatype="&xsd;string">http://www.forever21.com/Product/Category.aspx?br=f21&amp;category=sweater_basic</Has_URL>
         <Is_from rdf:resource="&Adriana;Armani"/>
         <Has_colour rdf:resource="&Adriana;Black"/>
@@ -512,6 +510,45 @@
     
 
 
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Black_Blouse_Nike -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Black_Blouse_Nike">
+        <rdf:type rdf:resource="&Adriana;Basic_sweaters"/>
+        <Has_URL>http://www.originals.ro/images/_110_110/2014/09/03/bluza-barbati-nike-club-crew-swoosh-longsleeve-shirt-611467010-11470-1_110_110.jpg</Has_URL>
+        <has_id>2</has_id>
+        <Has_buy_url>http://www.originals.ro/bluza-barbati-nike-club-crew-swoosh-longsleeve-shirt-611467-010-pret-200-250-p-11470.html</Has_buy_url>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Male"/>
+        <Is_from rdf:resource="&Adriana;Nike"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Black_Puma_Sweater -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Black_Puma_Sweater">
+        <rdf:type rdf:resource="&Adriana;Basic_sweaters"/>
+        <Has_buy_url>http://www.originals.ro/bluza-casual-femei-puma-cat-crew-sweat-top-81392301-pret-100-150-p-5527.html?osCsid=42f4eb601ac5eb5abcb6968abe64805a</Has_buy_url>
+        <has_id>3</has_id>
+        <Has_URL>http://www.originals.ro/images/_110_110/2011/04/04/bluza-femei-puma-cat-crew-sweat-top-81392301-5527-1_110_110.jpg</Has_URL>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Is_from rdf:resource="&Adriana;Puma"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Black_tie -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Black_tie">
@@ -524,6 +561,65 @@
 
     <owl:NamedIndividual rdf:about="&Adriana;Blue">
         <rdf:type rdf:resource="&Adriana;Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Blue_And_Red_Zoo_York_Hoodie -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Blue_And_Red_Zoo_York_Hoodie">
+        <rdf:type rdf:resource="&Adriana;Hoodie"/>
+        <has_id>1</has_id>
+        <Has_buy_url>http://www.originals.ro/hanorac-casual-barbati-zoo-york-prince-st-sweater-zyf12-34005-pret-100-150-p-8592.html</Has_buy_url>
+        <Has_URL>http://www.originals.ro/images/_110_110/2012/10/12/pulover-barbati-zoo-york-prince-st-sweater-zyf1234005-8592-1_110_110.jpg</Has_URL>
+        <Has_style rdf:resource="&Adriana;Black_tie"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+        <Is_from rdf:resource="&Adriana;Zoo_York"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Blue_Blouse_Nike -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Blue_Blouse_Nike">
+        <rdf:type rdf:resource="&Adriana;Basic_sweaters"/>
+        <Has_buy_url>http://www.originals.ro/bluza-barbati-nike-classic-fleece-crew-longsleeve-sh-404509-450-pret-100-150-p-8755.html?osCsid=42f4eb601ac5eb5abcb6968abe64805a</Has_buy_url>
+        <Has_buy_url>http://www.originals.ro/images/_110_110/2012/11/12/bluza-barbati-nike-classic-fleece-crew-longsleeve-sh-404509450-8755-1_110_110.jpg</Has_buy_url>
+        <has_id>1</has_id>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Male"/>
+        <Is_from rdf:resource="&Adriana;Nike"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Blue_Converse_Hoodie -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Blue_Converse_Hoodie">
+        <rdf:type rdf:resource="&Adriana;Hoodie"/>
+        <Has_URL>http://www.originals.ro/images/_110_110/2012/09/06/hanorac-barbati-converse-chevron-hoody-123mch102-8255-1_110_110.jpg</Has_URL>
+        <has_id>2</has_id>
+        <Has_buy_url>http://www.originals.ro/hanorac-barbati-converse-chevron-hoody-123mch-102-pret-150-200-p-8255.html</Has_buy_url>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_colour rdf:resource="&Adriana;Black"/>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Is_from rdf:resource="&Adriana;Converse"/>
+        <For_gender rdf:resource="&Adriana;Male"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
     </owl:NamedIndividual>
     
 
@@ -610,6 +706,14 @@
         <Has_colour rdf:resource="&Adriana;Green"/>
         <Is_from rdf:resource="&Adriana;Mango"/>
         <For_gender rdf:resource="&Adriana;Unisex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Converse -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Converse">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
     </owl:NamedIndividual>
     
 
@@ -789,6 +893,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Green_Asics_Sweater -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Green_Asics_Sweater">
+        <rdf:type rdf:resource="&Adriana;Basic_sweaters"/>
+        <Has_URL>http://www.originals.ro/images/_110_110/2014/11/14/bluza-barbati-asics-mpile-12z-1040xw00ib-11731-1_110_110.jpg</Has_URL>
+        <has_id>4</has_id>
+        <Has_buy_url>http://www.originals.ro/bluza-barbati-asics-mpile-12z-1040xw00ib-pret-100-150-p-11731.html</Has_buy_url>
+        <Is_from rdf:resource="&Adriana;Asics"/>
+        <Is_from_season rdf:resource="&Adriana;Autumn"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_colour rdf:resource="&Adriana;Green"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <For_gender rdf:resource="&Adriana;Unisex"/>
+        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#High_heels -->
 
     <owl:NamedIndividual rdf:about="&Adriana;High_heels">
@@ -928,7 +1051,6 @@
         <For_gender rdf:resource="&Adriana;Female"/>
         <Has_colour rdf:resource="&Adriana;Green"/>
         <Is_from rdf:resource="&Adriana;Mango"/>
-        <Is_from rdf:resource="&Adriana;Polo"/>
         <Has_colour rdf:resource="&Adriana;Red"/>
         <Has_colour rdf:resource="&Adriana;White"/>
     </owl:NamedIndividual>
@@ -968,11 +1090,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Maxi -->
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Long_Skirts -->
 
-    <owl:NamedIndividual rdf:about="&Adriana;Maxi">
-        <rdf:type rdf:resource="&Adriana;Maxi"/>
-        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/women%27s+skirts/307,default,sc.html?prefn1=Style&amp;prefv1=Maxi%20Skirt&amp;fix&amp;sz=200&amp;spcl&amp;cm_mmc=Google+Adwords-_-Womenswear+-+Skirt+-+Maxi+-+RLSA-_-Maxi+-+Core+-+W-_-maxi+skirt&amp;_$ja=cgid:14415303768|tsid:55320|cid:209345208|lid:495736910|nw:g|crid:53843074248|rnd:16683681500949610027|dvc:c|adp:1t2|mt:e</Has_URL>
+    <owl:NamedIndividual rdf:about="&Adriana;Long_Skirts">
+        <Has_URL rdf:datatype="&xsd;string">http://www.houseoffraser.co.uk/women%27s+skirts/307,default,sc.html?prefn1=Style&amp;prefv1=Long_Skirts%20Skirt&amp;fix&amp;sz=200&amp;spcl&amp;cm_mmc=Google+Adwords-_-Womenswear+-+Skirt+-+Long_Skirts+-+RLSA-_-Long_Skirts+-+Core+-+W-_-Long_Skirts+skirt&amp;_$ja=cgid:14415303768|tsid:55320|cid:209345208|lid:495736910|nw:g|crid:53843074248|rnd:16683681500949610027|dvc:c|adp:1t2|mt:e</Has_URL>
         <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_colour rdf:resource="&Adriana;Blue"/>
         <For_gender rdf:resource="&Adriana;Female"/>
@@ -986,10 +1107,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Maxi1 -->
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Long_Skirts1 -->
 
-    <owl:NamedIndividual rdf:about="&Adriana;Maxi1">
-        <rdf:type rdf:resource="&Adriana;Maxi"/>
+    <owl:NamedIndividual rdf:about="&Adriana;Long_Skirts1">
         <Is_from rdf:resource="&Adriana;Armani"/>
         <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_colour rdf:resource="&Adriana;Blue"/>
@@ -1029,7 +1149,6 @@
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Midi -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Midi">
-        <rdf:type rdf:resource="&Adriana;Midi"/>
         <Has_URL rdf:datatype="&xsd;string">http://www.asos.com/Women/Skirts/Midi-Skirts/Cat/pgecategory.aspx?cid=12906&amp;affid=14183&amp;utm_source=google&amp;utm_medium=ppc&amp;utm_term=midi%20skirts&amp;utm_content=&amp;utm_campaign=&amp;cvosrc=ppc.google.midi%20skirts&amp;matchtype=e&amp;network=g&amp;mobile=&amp;search=1&amp;content=&amp;creative=52455218061&amp;channelref=paid+search&amp;keyword=midi%20skirts&amp;adposition=1t1&amp;gclid=CK2M2dLahMMCFTLJtAody1UALA</Has_URL>
         <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_colour rdf:resource="&Adriana;Blue"/>
@@ -1046,7 +1165,6 @@
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Midi1 -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Midi1">
-        <rdf:type rdf:resource="&Adriana;Midi"/>
         <Has_style rdf:resource="&Adriana;Casual"/>
         <For_gender rdf:resource="&Adriana;Female"/>
         <Has_colour rdf:resource="&Adriana;Green"/>
@@ -1068,7 +1186,6 @@
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Mini -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Mini">
-        <rdf:type rdf:resource="&Adriana;Mini"/>
         <Has_URL rdf:datatype="&xsd;string">http://www.forever21.com/Product/Category.aspx?br=f21&amp;category=bottom_skirt-mini</Has_URL>
         <Has_colour rdf:resource="&Adriana;Blue"/>
         <Has_style rdf:resource="&Adriana;Disco"/>
@@ -1083,7 +1200,6 @@
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Mini1 -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Mini1">
-        <rdf:type rdf:resource="&Adriana;Mini"/>
         <Has_colour rdf:resource="&Adriana;Black"/>
         <Has_colour rdf:resource="&Adriana;Blue"/>
         <Has_style rdf:resource="&Adriana;Disco"/>
@@ -1100,6 +1216,14 @@
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Motorola -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Motorola">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Nike -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Nike">
         <rdf:type rdf:resource="&Adriana;Brand"/>
     </owl:NamedIndividual>
     
@@ -1131,34 +1255,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Polo -->
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Puma -->
 
-    <owl:NamedIndividual rdf:about="&Adriana;Polo">
-        <rdf:type rdf:resource="&Adriana;Polo"/>
-        <Has_URL rdf:datatype="&xsd;string">http://www.ralphlauren.com/family/index.jsp?categoryId=1766235</Has_URL>
-        <Has_colour rdf:resource="&Adriana;Blue"/>
-        <Has_style rdf:resource="&Adriana;Casual"/>
-        <Has_colour rdf:resource="&Adriana;Green"/>
-        <For_gender rdf:resource="&Adriana;Male"/>
-        <Is_from rdf:resource="&Adriana;Midi"/>
-        <Has_colour rdf:resource="&Adriana;Red"/>
-        <Has_style rdf:resource="&Adriana;Sport"/>
-        <Is_from_season rdf:resource="&Adriana;Winter"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Polo1 -->
-
-    <owl:NamedIndividual rdf:about="&Adriana;Polo1">
-        <rdf:type rdf:resource="&Adriana;Polo"/>
-        <Is_from rdf:resource="&Adriana;Armani"/>
-        <Has_colour rdf:resource="&Adriana;Blue"/>
-        <For_gender rdf:resource="&Adriana;Male"/>
-        <Has_style rdf:resource="&Adriana;Office"/>
-        <Has_colour rdf:resource="&Adriana;Red"/>
-        <Has_colour rdf:resource="&Adriana;White"/>
-        <Is_from_season rdf:resource="&Adriana;Winter"/>
+    <owl:NamedIndividual rdf:about="&Adriana;Puma">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
     </owl:NamedIndividual>
     
 
@@ -1182,6 +1282,23 @@
         <For_gender rdf:resource="&Adriana;Female"/>
         <Is_from rdf:resource="&Adriana;Meli_Melo"/>
         <Has_colour rdf:resource="&Adriana;Red"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Red_Puma_Hoodie -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Red_Puma_Hoodie">
+        <rdf:type rdf:resource="&Adriana;Hoodie"/>
+        <has_id>3</has_id>
+        <Has_URL>http://www.originals.ro/images/_110_110/2011/01/12/hanorac-femei-puma-blank-hooded-jacket-74077102-5089-1_110_110.jpg</Has_URL>
+        <Has_buy_url>http://www.originals.ro/hanorac-femei-puma-blank-hooded-74077102-pret-50-100-p-5089.html</Has_buy_url>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Has_style rdf:resource="&Adriana;Office"/>
+        <Is_from rdf:resource="&Adriana;Puma"/>
+        <Has_colour rdf:resource="&Adriana;Red"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
     </owl:NamedIndividual>
     
 
@@ -1444,6 +1561,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#White_And_Blue_Puma_Hoodie -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;White_And_Blue_Puma_Hoodie">
+        <rdf:type rdf:resource="&Adriana;Hoodie"/>
+        <Has_buy_url>http://www.originals.ro/hanorac-femei-puma-shortsleeve-terry-50409102-pret-50-100-p-4531.html</Has_buy_url>
+        <has_id>4</has_id>
+        <Has_URL>http://www.originals.ro/images/_110_110/2010/06/09/bluza-femei-puma-shortsleeve-terry-50409102-4531-1_110_110.jpg</Has_URL>
+        <Has_colour rdf:resource="&Adriana;Blue"/>
+        <Has_style rdf:resource="&Adriana;Casual"/>
+        <Has_style rdf:resource="&Adriana;Disco"/>
+        <For_gender rdf:resource="&Adriana;Female"/>
+        <Is_from rdf:resource="&Adriana;Puma"/>
+        <Has_style rdf:resource="&Adriana;Sport"/>
+        <Is_from_season rdf:resource="&Adriana;Spring"/>
+        <Is_from_season rdf:resource="&Adriana;Summer"/>
+        <Has_colour rdf:resource="&Adriana;White"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Wide_leg -->
 
     <owl:NamedIndividual rdf:about="&Adriana;Wide_leg">
@@ -1467,6 +1604,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/bobo/ontologies/2015/0/Adriana#Zoo_York -->
+
+    <owl:NamedIndividual rdf:about="&Adriana;Zoo_York">
+        <rdf:type rdf:resource="&Adriana;Brand"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1475,6 +1620,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Adriana;Necklaces"/>
+            <rdf:Description rdf:about="&Adriana;Rings"/>
+            <rdf:Description rdf:about="&Adriana;Watches"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -1492,14 +1645,6 @@
             <rdf:Description rdf:about="&Adriana;Skirts"/>
             <rdf:Description rdf:about="&Adriana;Style"/>
             <rdf:Description rdf:about="&Adriana;Sweaters"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&Adriana;Necklaces"/>
-            <rdf:Description rdf:about="&Adriana;Rings"/>
-            <rdf:Description rdf:about="&Adriana;Watches"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
