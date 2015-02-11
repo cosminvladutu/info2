@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Globalization;
 using System.Linq;
-using System.Web;
 using Common;
+using SecProject.BL;
 
 namespace SecProject.Models
 {
@@ -30,27 +29,27 @@ namespace SecProject.Models
 
         public void PopulateModel(List<ProductType> pt, string selectedBrand, string selectedColour, string selectedGender, string selectedSeason, string selectedStyle)
         {
-            var allBrands = new BL.Populate().PopulateAllBrands();
+            var allBrands = new Populate().PopulateAllBrands();
             allBrands.Add("All", "All");
             Brand = new EnumerableDropDownViewModel(allBrands, selectedBrand == "" ? "All" : selectedBrand);
             Brand.Items = Brand.Items.OrderBy(t => t.Text).ToList();
 
-            var allColours = new BL.Populate().PopulateAllColours();
+            var allColours = new Populate().PopulateAllColours();
             allColours.Add("All", "All");
             Colour = new EnumerableDropDownViewModel(allColours, selectedColour == "" ? "All" : selectedColour);
             Colour.Items = Colour.Items.OrderBy(t => t.Text).ToList();
 
-            var g = new BL.Populate().PopulateAllGenders();
+            var g = new Populate().PopulateAllGenders();
             g.Add("All", "All");
             Gender = new EnumerableDropDownViewModel(g, selectedGender == "" ? "All" : selectedGender);
             Gender.Items = Gender.Items.OrderBy(t => t.Text).ToList();
 
-            var allSeasons = new BL.Populate().PopulateAllSeasons();
+            var allSeasons = new Populate().PopulateAllSeasons();
             allSeasons.Add("All", "All");
             Season = new EnumerableDropDownViewModel(allSeasons, selectedBrand == "" ? "All" : selectedBrand);
             Season.Items = Season.Items.OrderBy(t => t.Text).ToList();
 
-            var allStyles = new BL.Populate().PopulateAllStyles();
+            var allStyles = new Populate().PopulateAllStyles();
             allStyles.Add("All", "All");
             Style = new EnumerableDropDownViewModel(allStyles, selectedStyle == "" ? "All" : selectedBrand);
             Style.Items = Style.Items.OrderBy(t => t.Text).ToList();
@@ -59,36 +58,42 @@ namespace SecProject.Models
         public ProductInstance FilterProductInstance(string selectedBrand, string selectedColour, string selectedGender,
             string selectedSeason, string selectedStyle, ProductInstance instance)
         {
-            if (selectedBrand.ToUpper() != "ALL" && selectedBrand.ToUpper() != "")
+            if (selectedBrand.ToUpper() != "ALL" && selectedBrand.ToUpper() != "" && instance.Brand != null)
             {
                 if (instance.Brand.SingleOrDefault(t => t.Contains(selectedBrand)) == null)
                 {
                     return null;
                 }
             }
-            if (selectedColour.ToUpper() != "ALL" && selectedColour.ToUpper() != "")
+            if (selectedColour.ToUpper() != "ALL" && selectedColour.ToUpper() != "" && instance.Colour != null)
             {
                 if (instance.Colour.SingleOrDefault(t => t.Contains(selectedColour)) == null)
                 {
                     return null;
                 }
             }
-            if (selectedGender.ToUpper() != "ALL" && selectedGender.ToUpper() != "")
+            if (selectedGender.ToUpper() != "ALL" && selectedGender.ToUpper() != "" && instance.Gender != null)
             {
                 if (instance.Gender.SingleOrDefault(t => t.Contains(selectedGender)) == null)
                 {
                     return null;
                 }
             }
-            if (selectedSeason.ToUpper() != "ALL" && selectedSeason.ToUpper() != "")
+            if (selectedSeason.ToUpper() != "ALL" && selectedSeason.ToUpper() != "" && instance.Season != null)
             {
                 if (instance.Season.SingleOrDefault(t => t.Contains(selectedSeason)) == null)
                 {
                     return null;
                 }
             }
-            if (selectedStyle.ToUpper() == "ALL" && selectedStyle.ToUpper() == "") return instance;
-            return instance.Style.SingleOrDefault(t => t.Contains(selectedStyle)) == null ? null : instance;
+            if (selectedStyle.ToUpper() != "ALL" && selectedStyle.ToUpper() != "" && instance.Style != null)
+            {
+                if (instance.Style.SingleOrDefault(t => t.Contains(selectedStyle)) == null)
+                {
+                    return null;
+                }
+            }
+            return instance;
         }
 
         public void PopulateProductListFull(List<ProductType> pt, string subcategoryName, string selectedBrand, string selectedColour, string selectedGender,
@@ -101,39 +106,36 @@ namespace SecProject.Models
                 {
                     foreach (var subcateg in categ.SubCategories.Where(f => f.SubCategoryName.ToUpper() == subcategoryName.ToUpper()))
                     {
-                        foreach (var prod in subcateg.Products)
-                        {
-                            var instance = FilterProductInstance(selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, prod);
-                            ProductList.Add(new ProductsToShow
-                            {
-                                Name = instance.Name,
-                                ImgUrl = !String.IsNullOrEmpty(instance.Url) ? instance.Url : String.Empty,
-                                Categ = categ.CategoryName,
-                                SubCateg = subcateg.SubCategoryName,
-                                BuyUrl = !String.IsNullOrEmpty(instance.BuyUrl) ? instance.BuyUrl : String.Empty
-                            });
-                        }
+                        FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
                     }
                 }
                 else
                 {
                     foreach (var subcateg in categ.SubCategories)
                     {
-                        foreach (var prod in subcateg.Products)
-                        {
-                            var instance = FilterProductInstance(selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, prod);
-                            ProductList.Add(new ProductsToShow
-                            {
-                                Name = instance.Name,
-                                ImgUrl = !String.IsNullOrEmpty(instance.Url) ? instance.Url : String.Empty,
-                                Categ = categ.CategoryName,
-                                SubCateg = subcateg.SubCategoryName,
-                                BuyUrl = !String.IsNullOrEmpty(instance.BuyUrl) ? instance.BuyUrl : String.Empty
-                            });
-                        }
+                        FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
                     }
                 }
 
+            }
+        }
+
+        public void FillProductsToShows(SubCategory subcateg, ProductType categ, string selectedBrand, string selectedColour, string selectedGender, string selectedSeason, string selectedStyle)
+        {
+            foreach (var prod in subcateg.Products)
+            {
+                var instance = FilterProductInstance(selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, prod);
+                if (instance != null)
+                {
+                    ProductList.Add(new ProductsToShow
+                    {
+                        Name = instance.Name,
+                        ImgUrl = !String.IsNullOrEmpty(instance.Url) ? instance.Url : String.Empty,
+                        Categ = categ.CategoryName,
+                        SubCateg = subcateg.SubCategoryName,
+                        BuyUrl = !String.IsNullOrEmpty(instance.BuyUrl) ? instance.BuyUrl : String.Empty
+                    });
+                }
             }
         }
     }

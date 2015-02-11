@@ -20,7 +20,7 @@
                             <div class="btn-group">
                                 @foreach (var subCateg in prod.SubCategories)
                                 {
-                                    <a onclick="changeSubcategory(@subCateg.SubCategoryName)" style="text-align: center; display: block;" class="btn btn-link operationsButtons">
+                                    <a onclick="changeSubcategory('@subCateg.SubCategoryName')" style="text-align: center; display: block;" class="btn btn-link operationsButtons">
                                         <h5>@subCateg.SubCategoryName</h5>
                                     </a>
                                 }

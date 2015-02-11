@@ -101,7 +101,7 @@ $(document).ready(function () {
 
 
 function changeSubcategory(subCateg) {
-
+    
     var url = $("#changeSubcategory").val();
 
     $.ajax({
