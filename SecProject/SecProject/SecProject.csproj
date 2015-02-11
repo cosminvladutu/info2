@@ -202,10 +202,15 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\BingSearchContainer.cs" />
+    <Compile Include="DAL\DALContext.cs" />
+    <Compile Include="DAL\SecDBContext.cs" />
+    <Compile Include="DAL\UserProductLinkTables.cs" />
+    <Compile Include="DAL\UserProfile.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\EnumerableDropDownViewModel.cs" />
     <Compile Include="Models\ProductOntologyFilterModelViewModel.cs" />
@@ -322,10 +327,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Home\PartialViews\ProductFilter.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\EnumerableDropDownViewModel.cshtml" />
     <Content Include="Views\Home\PartialViews\ProductsPartialView.cshtml" />
+    <Content Include="Views\Home\ProductsMain.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

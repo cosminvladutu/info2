@@ -12,10 +12,21 @@
                 <td>
                     @if (!String.IsNullOrWhiteSpace(list[index].ImgUrl))
                     {
-                        <img src="@Url.Content(list[index].ImgUrl)" style="height: 200px" alt="Image" />
-                        <div style="margin-top: 3px" align="center">
+                        <img src="@Url.Content(list[index].ImgUrl)" style="height: 250px" alt="Image" />
+                        <div style="margin-bottom: 3px; margin-top: 3px" align="center">
                             <a href=@list[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
-                            <a class="btn btn-success btn-sm">Add to wordrobe</a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (!list[index].UserProductLinkTable.Contains(list[index].Name))
+                                {
+                                    <a onclick="addToWardrobe('@list[index].Name')" class="btn btn-success btn-sm">Add to Wardrobe</a>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-info">You have this</a>
+                                }
+
+                            }
                         </div>
                     }
                 </td>
@@ -25,13 +36,24 @@
         {
             <td>
                 @if (!String.IsNullOrWhiteSpace(list[index].ImgUrl))
-                {
-                    <img src="@Url.Content(list[index].ImgUrl)" style="height: 200px" alt="Image" />
-                    <div style="margin-top: 3px" align="center">
-                        <a class="btn btn-danger btn-sm">Where to buy</a>
-                        <a class="btn btn-success btn-sm">Add to wordrobe</a>
-                    </div>
-                }
+                    {
+                        <img src="@Url.Content(list[index].ImgUrl)" style="height: 250px" alt="Image" />
+                        <div style="margin-bottom: 3px; margin-top: 3px" align="center">
+                            <a href=@list[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (!list[index].UserProductLinkTable.Contains(list[index].Name))
+                                {
+                                    <a onclick="addToWardrobe('@list[index].Name')" class="btn btn-success btn-sm">Add to Wardrobe</a>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-info">You have this</a>
+                                }
+
+                            }
+                        </div>
+                    }
             </td>
         }
     }

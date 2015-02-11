@@ -29,7 +29,8 @@ namespace SecProject.Controllers
             new Base().Initialise();
 
             var productVM = new ProductViewModel();
-            productVM.PopulateProductType(new Base().ReturnProductTypes());
+            //productVM.PopulateProductType(new Base().ReturnProductTypes());
+            productVM.PopulateProductType(ProductTypes);
 
             return View("Products", productVM);
         }
@@ -58,6 +59,18 @@ namespace SecProject.Controllers
             pofmVm.PopulateProductListFull(ProductTypes, subCateg, "", "", "", "", "");
 
             return PartialView("PartialViews/ProductFilter", pofmVm);
+        }
+
+        [HttpPost]
+        public ActionResult AddToWardrobe(string productName, string selectedBrand, string selectedColour, string selectedGender, string selectedStyle, string selectedSeason)
+        {
+            var model = new ProductOntologyFilterModelViewModel();
+            var dal = new DAL.DALContext();
+            var up = dal.GetUserProfile(User.Identity.Name);
+            dal.AddToWardrobe(productName,up.UserId);
+            model.PopulateModel(ProductTypes, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
+            model.PopulateProductListFull(ProductTypes, null, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
+            return PartialView("PartialViews/ProductsPartialView", model.ProductList);
         }
     }
 }

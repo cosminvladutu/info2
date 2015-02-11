@@ -1,0 +1,43 @@
+﻿@model SecProject.Models.ProductViewModel
+<script src="~/Scripts/FilterOnProducts.js" type="text/javascript"></script>
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="col-md-9">
+            @foreach (var prod in Model.ProductTypes)
+            {
+                <div class="panel-group" id="accordion" style="margin-top: 20px">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse_@prod.CategoryName">@prod.CategoryName</a>
+                            </h4>
+                        </div>
+                        <div id="collapse_@prod.CategoryName" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                @foreach (var subCateg in prod.SubCategories)
+                                {
+
+                                    <a onclick="changeSubcategory('@subCateg.SubCategoryName') " style="text-align: center; display: block;" class="btn btn-link operationsButtons">
+                                        <h5>@subCateg.SubCategoryName.Replace('_',' ')</h5>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+
+
+    <div id="ProductAndFilters" class="col-md-9">
+        @{
+
+            Html.RenderPartial("PartialViews/ProductFilter", Model.ProductsAndFilters);
+        }
+    </div>
+</div>

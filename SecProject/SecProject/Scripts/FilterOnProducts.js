@@ -81,6 +81,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#Season_SelectedItem").change(function () {
+        alert("season");
         var url = $('#onDropDownChangeOnProductsFilter').val();
         var selectedBrand = $("#Brand_SelectedItem :selected").val();
         var selectedColour = $("#Colour_SelectedItem :selected").val();
@@ -110,6 +111,24 @@ function changeSubcategory(subCateg) {
         type: 'GET',
         success: function (data) {
             $("#ProductAndFilters").html(data);
+        }
+    });
+};
+
+function addToWardrobe(productName) {
+
+    var url = $("#addToWardrobe").val();
+    var selectedBrand = $("#Brand_SelectedItem :selected").val();
+    var selectedColour = $("#Colour_SelectedItem :selected").val();
+    var selectedGender = $("#Gender_SelectedItem :selected").val();
+    var selectedStyle = $("#Style_SelectedItem :selected").val();
+    var selectedSeason = $("#Season_SelectedItem :selected").val();
+    $.ajax({
+        data: { productName: productName, selectedBrand: selectedBrand, selectedColour: selectedColour, selectedGender: selectedGender, selectedStyle: selectedStyle, selectedSeason: selectedSeason },
+        url: url,
+        type: 'POST',
+        success: function (data) {
+            $("#ProductsPartialView").html(data);
         }
     });
 };
