@@ -47,6 +47,7 @@ namespace SecProject.Migrations
             //{
             //    roles.AddUsersToRoles(new[] { "cosmin" }, new[] { "admin" });
             //}
+
         }
     }
 }
