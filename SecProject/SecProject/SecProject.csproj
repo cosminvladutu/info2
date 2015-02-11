@@ -202,8 +202,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\BingSearchContainer.cs" />
+    <Compile Include="DAL\DALContext.cs" />
     <Compile Include="DAL\SecDBContext.cs" />
     <Compile Include="DAL\UserProductLinkTable.cs" />
+    <Compile Include="DAL\UserProfile.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

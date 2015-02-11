@@ -45,3 +45,6 @@ obj
 Network Trash Folder
 Temporary Items
 .apdisk
+*.mdf
+*.ldf
+SecProject/SecProject/App_Data/aspnet-SecProject-20150125124205.mdf

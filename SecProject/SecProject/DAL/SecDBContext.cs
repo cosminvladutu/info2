@@ -8,7 +8,8 @@ namespace SecProject.DAL
 {
     public class SecDbContext : DbContext
     {
-        public DbSet<UserProductLinkTable> userProductLink { get; set; }
+        public DbSet<UserProductLinkTable> UserProductLink { get; set; }
+        public DbSet<UserProfile> UserProfiles{ get; set; }
 
         public SecDbContext()
             : base("name=DefaultConnection")
