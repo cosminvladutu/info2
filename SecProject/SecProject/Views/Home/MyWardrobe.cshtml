@@ -1,0 +1,56 @@
+﻿@model SecProject.Models.ProductViewModel
+
+
+
+@Html.Hidden("changeSubcategory", Url.Action("ChangeSubCategory", "Home"))
+@*@Html.Hidden("addToWardrobe", Url.Action("AddToWardrobe", "Home"))
+@Html.Hidden("onDropDownChangeOnProductsFilter", Url.Action("DropDownFilterOnProducts", "Home"))*@
+
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<script src="~/Scripts/FilterOnWardrobe.js" type="text/javascript"></script>
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="col-md-9">
+            @foreach (var prod in Model.ProductTypes)
+            {
+                <div class="panel-group" id="accordion" style="margin-top: 20px">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse_@prod.CategoryName">@prod.CategoryName</a>
+                            </h4>
+                        </div>
+                        <div id="collapse_@prod.CategoryName" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                @foreach (var subCateg in prod.SubCategories)
+                                {
+
+                                    <a onclick="changeSubcategory('@subCateg.SubCategoryName') " style="text-align: center; display: block;" class="btn btn-link operationsButtons">
+                                        <h5>@subCateg.SubCategoryName.Replace('_',' ')</h5>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+
+
+    <div id="ProductAndFiltersOnWardrobe" class="col-md-9">
+        @{
+
+            Html.RenderPartial("PartialViews/ProductFilterInWardrobe", Model.ProductsAndFilters);
+        }
+    </div>
+</div>}

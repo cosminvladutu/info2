@@ -16,5 +16,15 @@ namespace SecProject.Models
             ProductsAndFilters.PopulateModel(pt,"","","","","");
             ProductsAndFilters.PopulateProductListFull(pt, null, "", "", "", "", "");
         }
+
+        public void PopulateWardrobe(List<ProductType> pt)
+        {
+            ProductTypes = new List<ProductType>();
+            ProductTypes = pt;
+            ProductsAndFilters = new ProductOntologyFilterModelViewModel();
+            ProductsAndFilters.PopulateModel(pt, "", "", "", "", "");
+     //       ProductsAndFilters.PopulateProductWardrobe(pt, null, "", "", "", "", "");
+            ProductsAndFilters.PopulateProductListFull(pt, null, "", "", "", "", "");
+        }
     }
 }

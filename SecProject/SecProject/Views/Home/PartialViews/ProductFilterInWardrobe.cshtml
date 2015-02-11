@@ -1,0 +1,35 @@
+﻿@model SecProject.Models.ProductOntologyFilterModelViewModel
+
+
+
+
+
+@*<div class="row">
+    <div class="form-group col-md-2">
+        <label>@Html.DisplayNameFor(m => m.Brand)</label>
+        @Html.EditorFor(m => m.Brand)
+    </div>
+    <div class="form-group col-md-2">
+        <label>@Html.DisplayNameFor(m => m.Colour)</label>
+        @Html.EditorFor(m => m.Colour)
+    </div>
+    <div class="form-group col-md-2">
+        <label>@Html.DisplayNameFor(m => m.Gender)</label>
+        @Html.EditorFor(m => m.Gender)
+    </div>
+    <div class="form-group col-md-2">
+        <label>@Html.DisplayNameFor(m => m.Season)</label>
+        @Html.EditorFor(m => m.Season)
+    </div>
+    <div class="form-group col-md-2">
+        <label>@Html.DisplayNameFor(m => m.Style)</label>
+        @Html.EditorFor(m => m.Style)
+    </div>
+</div>*@
+
+
+<div id="ProductsPartialView" class="row col-md-12">
+    @{
+        Html.RenderPartial("PartialViews/ProductInMyWardrobePartialView", Model.ProductList);
+    }
+</div>

@@ -72,5 +72,14 @@ namespace SecProject.Controllers
             model.PopulateProductListFull(ProductTypes, null, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
             return PartialView("PartialViews/ProductsPartialView", model.ProductList);
         }
+
+        public ActionResult MyWardrobe()
+        {
+            var productVM = new ProductViewModel();
+          
+            productVM.PopulateWardrobe(ProductTypes);
+
+            return View("MyWardrobe", productVM);
+        }
     }
 }

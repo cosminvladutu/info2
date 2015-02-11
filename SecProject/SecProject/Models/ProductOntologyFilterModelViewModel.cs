@@ -156,6 +156,41 @@ namespace SecProject.Models
                 }
             }
         }
+
+        public void PopulateProductWardrobe(List<ProductType> pt, string subcategoryName, string selectedBrand, string selectedColour, string selectedGender,
+            string selectedSeason, string selectedStyle)
+        {
+            var userProfile = new DAL.UserProfile();
+            var wardrobe = new List<UserProductLinkTables>();
+            userProfile = new DALContext().GetUserProfile(HttpContext.Current.User.Identity.Name);
+            if (userProfile != null)
+                wardrobe = new DALContext().GetProductsByUserId(userProfile.UserId);
+            ProductList = new List<ProductsToShow>();
+            var list = new List<string>();
+            foreach (var item in wardrobe)
+            {
+                list.Add(item.ProductName);
+            }
+            foreach (var categ in pt)
+            {
+                if (subcategoryName != null)
+                {
+                    foreach (var subcateg in categ.SubCategories.Where(f => f.SubCategoryName.ToUpper() == subcategoryName.ToUpper()))
+                    {
+                        FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, list);
+                    }
+                }
+                else
+                {
+                    foreach (var subcateg in categ.SubCategories)
+                    {
+                        FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, list);
+                    }
+                }
+
+            }
+        }
+
     }
 
 }
