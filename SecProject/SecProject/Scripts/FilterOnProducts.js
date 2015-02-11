@@ -114,3 +114,21 @@ function changeSubcategory(subCateg) {
         }
     });
 };
+
+function addToWardrobe(productName) {
+
+    var url = $("#addToWardrobe").val();
+    var selectedBrand = $("#Brand_SelectedItem :selected").val();
+    var selectedColour = $("#Colour_SelectedItem :selected").val();
+    var selectedGender = $("#Gender_SelectedItem :selected").val();
+    var selectedStyle = $("#Style_SelectedItem :selected").val();
+    var selectedSeason = $("#Season_SelectedItem :selected").val();
+    $.ajax({
+        data: { productName: productName, selectedBrand: selectedBrand, selectedColour: selectedColour, selectedGender: selectedGender, selectedStyle: selectedStyle, selectedSeason: selectedSeason },
+        url: url,
+        type: 'POST',
+        success: function (data) {
+            $("#ProductsPartialView").html(data);
+        }
+    });
+};

@@ -5,7 +5,7 @@ namespace SecProject.DAL
 {
     public class DALContext
     {
-        public UserProfile GetUserId(string username)
+        public UserProfile GetUserProfile(string username)
         {
             using (var dbContext = new SecDbContext())
             {
@@ -13,15 +13,16 @@ namespace SecProject.DAL
             }
         }
 
-        public void AddToWordrobe(string productName, int userId)
+        public void AddToWardrobe(string productName, int userId)
         {
             using (var dbContext = new SecDbContext())
             {
-                dbContext.UserProductLink.Add(new UserProductLinkTable { ProductName = productName, UserId = userId });
+                dbContext.UserProductLink.Add(new UserProductLinkTables { ProductName = productName, UserId = userId });
+                dbContext.SaveChanges();
             }
         }
 
-        public List<UserProductLinkTable> GetProductsByUserId(int userId)
+        public List<UserProductLinkTables> GetProductsByUserId(int userId)
         {
             using (var dbContext = new SecDbContext())
             {

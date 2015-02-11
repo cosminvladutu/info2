@@ -8,18 +8,19 @@ namespace SecProject.DAL
 {
     public class SecDbContext : DbContext
     {
-        public DbSet<UserProductLinkTable> UserProductLink { get; set; }
+        public DbSet<UserProductLinkTables> UserProductLink { get; set; }
         public DbSet<UserProfile> UserProfiles{ get; set; }
 
         public SecDbContext()
             : base("name=DefaultConnection")
         {
-        //   . Database.SetInitializer<SecDbContext>(null);
+           Database.SetInitializer<SecDbContext>(null);
         }
 
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<UserProductLinkTable>().ToTable("UserProductLinkTable");
-        //}
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserProductLinkTables>().ToTable("UserProductLinkTables");
+            modelBuilder.Entity<UserProfile>().ToTable("UserProfile");
+        }
     }
 }

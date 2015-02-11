@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SecProject.DAL
 {
-    public class UserProductLinkTable
+    public class UserProductLinkTables
     {
         [Key]
         public int Id{ get; set; }

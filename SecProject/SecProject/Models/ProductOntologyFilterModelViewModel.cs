@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Web;
 using Common;
 using SecProject.BL;
+using SecProject.DAL;
 
 namespace SecProject.Models
 {
@@ -25,7 +30,7 @@ namespace SecProject.Models
         public EnumerableDropDownViewModel Style { get; set; }
 
         public List<ProductsToShow> ProductList { get; set; }
-
+       
 
         public void PopulateModel(List<ProductType> pt, string selectedBrand, string selectedColour, string selectedGender, string selectedSeason, string selectedStyle)
         {
@@ -99,33 +104,45 @@ namespace SecProject.Models
         public void PopulateProductListFull(List<ProductType> pt, string subcategoryName, string selectedBrand, string selectedColour, string selectedGender,
             string selectedSeason, string selectedStyle)
         {
+            var userProfile = new DAL.UserProfile();
+            var wardrobe = new List<UserProductLinkTables>();
+            userProfile = new DALContext().GetUserProfile(HttpContext.Current.User.Identity.Name);
+            if (userProfile != null)
+                wardrobe = new DALContext().GetProductsByUserId(userProfile.UserId);
             ProductList = new List<ProductsToShow>();
+            var list = new List<string>();
+            foreach (var item in wardrobe)
+            {
+                list.Add(item.ProductName);
+            }
             foreach (var categ in pt)
             {
                 if (subcategoryName != null)
                 {
                     foreach (var subcateg in categ.SubCategories.Where(f => f.SubCategoryName.ToUpper() == subcategoryName.ToUpper()))
                     {
-                        FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
+                        FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, list);
                     }
                 }
                 else
                 {
                     foreach (var subcateg in categ.SubCategories)
                     {
-                        FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
+                        FillProductsToShows(subcateg, categ, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, list);
                     }
                 }
 
             }
         }
 
-        public void FillProductsToShows(SubCategory subcateg, ProductType categ, string selectedBrand, string selectedColour, string selectedGender, string selectedSeason, string selectedStyle)
+        public void FillProductsToShows(SubCategory subcateg, ProductType categ, string selectedBrand, string selectedColour, string selectedGender, string selectedSeason,
+ string selectedStyle, List<string> listFromWardrobe)
         {
             foreach (var prod in subcateg.Products)
             {
                 var instance = FilterProductInstance(selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, prod);
                 if (instance != null)
+                
                 {
                     ProductList.Add(new ProductsToShow
                     {
@@ -133,7 +150,8 @@ namespace SecProject.Models
                         ImgUrl = !String.IsNullOrEmpty(instance.Url) ? instance.Url : String.Empty,
                         Categ = categ.CategoryName,
                         SubCateg = subcateg.SubCategoryName,
-                        BuyUrl = !String.IsNullOrEmpty(instance.BuyUrl) ? instance.BuyUrl : String.Empty
+                        BuyUrl = !String.IsNullOrEmpty(instance.BuyUrl) ? instance.BuyUrl : String.Empty,
+                        UserProductLinkTable = listFromWardrobe
                     });
                 }
             }
