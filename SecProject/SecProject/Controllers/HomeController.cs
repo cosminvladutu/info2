@@ -48,7 +48,7 @@ namespace SecProject.Controllers
             // var model = new List<ProductsToShow>();
             var model = new ProductOntologyFilterModelViewModel();
             model.PopulateModel(ProductTypes, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
-            model.PopulateProductListFull(ProductTypes, null,selectedBrand,selectedColour,selectedGender,selectedSeason,selectedStyle);
+            model.PopulateProductListFull(ProductTypes, null, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
             return PartialView("PartialViews/ProductsPartialView", model.ProductList);
         }
 
@@ -67,7 +67,7 @@ namespace SecProject.Controllers
             var model = new ProductOntologyFilterModelViewModel();
             var dal = new DAL.DALContext();
             var up = dal.GetUserProfile(User.Identity.Name);
-            dal.AddToWardrobe(productName,up.UserId);
+            dal.AddToWardrobe(productName, up.UserId);
             model.PopulateModel(ProductTypes, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
             model.PopulateProductListFull(ProductTypes, null, selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle);
             return PartialView("PartialViews/ProductsPartialView", model.ProductList);
