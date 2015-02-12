@@ -128,7 +128,8 @@ namespace SecProject.Models
             var returnList = new List<ProductsToShow>();
 
             #region All
-            if (selectedSeason.ToUpper() == "ALL" && selectedSeason.ToUpper() != "" &&
+            if (((selectedSeason.ToUpper() == "ALL" && selectedSeason.ToUpper() != "") || selectedSeason.ToUpper() == "SPRING" || selectedSeason.ToUpper() == "SUMMER")
+                &&
                selectedStyle.ToUpper() == "ALL" && selectedStyle.ToUpper() != "")
             {
                 //var listOfItems = new List<string> {"RINGS", "NECKLACES", "BOOTS"};
@@ -246,6 +247,22 @@ namespace SecProject.Models
                         else
                         {
                             returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.Category.ToUpper() == "SHOES").ToList())));
+                        }
+                        if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "BASIC_SWEATERS"))
+                        {
+                            returnList.Add(
+                                GetProductsToShowFromRandom(
+                                    GetRandomByType(
+                                        AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "BASIC_SWEATERS")
+                                            .ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(
+                                GetProductsToShowFromRandom(
+                                    GetRandomByType(
+                                        AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "BASIC_SWEATERS")
+                                            .ToList())));
                         }
                     }
                     else
