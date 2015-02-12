@@ -10,7 +10,7 @@
                 @if (!String.IsNullOrWhiteSpace(Model[index].ImgUrl))
                 {
 
-                    <img src="@Url.Content(Model[index].ImgUrl)" style="height: 250px" alt="Image" />
+                     <img itemprop="image" src="@Url.Content(Model[index].ImgUrl)" style="height: 250px" alt="Image" />
                     <div style="margin-bottom: 3px; margin-top: 3px; margin-right: 3px; margin-left: 3px" align="center">
                         <a href=@Model[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
                     </div>
@@ -23,7 +23,7 @@
             <td>
                 @if (!String.IsNullOrWhiteSpace(Model[index].ImgUrl))
                 {
-                    <img src="@Url.Content(Model[index].ImgUrl)" style="height: 250px" alt="Image" />
+                     <img itemprop="image" src="@Url.Content(Model[index].ImgUrl)" style="height: 250px" alt="Image" />
                     <div style="margin-bottom: 3px; margin-top: 3px; margin-right: 3px; margin-left: 3px; " align="center">
                         <a href=@Model[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
                     </div>
