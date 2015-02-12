@@ -27,7 +27,7 @@ namespace SecProject.Models
         public EnumerableDropDownViewModel Style { get; set; }
 
         public List<ProductsToShow> ProductList { get; set; }
-       
+
 
         public void PopulateModel(List<ProductType> pt, string selectedBrand, string selectedColour, string selectedGender, string selectedSeason, string selectedStyle)
         {
@@ -101,16 +101,20 @@ namespace SecProject.Models
         public void PopulateProductListFull(List<ProductType> pt, string subcategoryName, string selectedBrand, string selectedColour, string selectedGender,
             string selectedSeason, string selectedStyle)
         {
-            var userProfile = new DAL.UserProfile();
-            var wardrobe = new List<UserProductLinkTables>();
-            userProfile = new DALContext().GetUserProfile(HttpContext.Current.User.Identity.Name);
-            if (userProfile != null)
-                wardrobe = new DALContext().GetProductsByUserId(userProfile.UserId);
-            ProductList = new List<ProductsToShow>();
             var list = new List<string>();
-            foreach (var item in wardrobe)
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                list.Add(item.ProductName);
+                var userProfile = new DAL.UserProfile();
+                var wardrobe = new List<UserProductLinkTables>();
+                userProfile = new DALContext().GetUserProfile(HttpContext.Current.User.Identity.Name);
+                if (userProfile != null)
+                    wardrobe = new DALContext().GetProductsByUserId(userProfile.UserId);
+                ProductList = new List<ProductsToShow>();
+
+                foreach (var item in wardrobe)
+                {
+                    list.Add(item.ProductName);
+                }
             }
             foreach (var categ in pt)
             {
@@ -134,11 +138,15 @@ namespace SecProject.Models
         public void FillProductsToShows(SubCategory subcateg, ProductType categ, string selectedBrand, string selectedColour, string selectedGender, string selectedSeason,
  string selectedStyle, List<string> listFromWardrobe)
         {
+            if (ProductList==null)
+            {
+                ProductList=new List<ProductsToShow>();
+            }
+            var boolTest = listFromWardrobe.Count == 0;
             foreach (var prod in subcateg.Products)
             {
                 var instance = FilterProductInstance(selectedBrand, selectedColour, selectedGender, selectedSeason, selectedStyle, prod);
                 if (instance != null)
-                
                 {
                     ProductList.Add(new ProductsToShow
                     {
@@ -147,7 +155,7 @@ namespace SecProject.Models
                         Categ = categ.CategoryName,
                         SubCateg = subcateg.SubCategoryName,
                         BuyUrl = !String.IsNullOrEmpty(instance.BuyUrl) ? instance.BuyUrl : String.Empty,
-                        UserProductLinkTable = listFromWardrobe
+                        UserProductLinkTable = boolTest ? new List<string>() : listFromWardrobe
                     });
                 }
             }
