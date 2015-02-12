@@ -126,6 +126,8 @@ namespace SecProject.Models
         public List<ProductsToShow> PopulateRandomList(string selectedGender, string selectedStyle, string selectedSeason)
         {
             var returnList = new List<ProductsToShow>();
+
+            #region All
             if (selectedSeason.ToUpper() == "ALL" && selectedSeason.ToUpper() != "" &&
                selectedStyle.ToUpper() == "ALL" && selectedStyle.ToUpper() != "")
             {
@@ -142,7 +144,7 @@ namespace SecProject.Models
                     {
                         returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.Category.ToUpper() == "DRESSES").ToList())));
                     }
-                    if (AuxProductsWardrobe.Any(f => f.Category.ToUpper() == "RINGS"))
+                    if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "RINGS"))
                     {
                         returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "RINGS").ToList())));
                     }
@@ -150,7 +152,7 @@ namespace SecProject.Models
                     {
                         returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "RINGS").ToList())));
                     }
-                    if (AuxProductsWardrobe.Any(f => f.Category.ToUpper() == "NECKLACES"))
+                    if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "NECKLACES"))
                     {
                         returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "NECKLACES").ToList())));
                     }
@@ -158,16 +160,149 @@ namespace SecProject.Models
                     {
                         returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "NECKLACES").ToList())));
                     }
-                    if (AuxProductsWardrobe.Any(f => f.Category.ToUpper() == "BOOTS"))
+                    if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "BOOTS"))
                     {
                         returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "BOOTS").ToList())));
                     }
                     else
                     {
                         returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "BOOTS").ToList())));
-                    }  
+                    }
+                }
+                else
+                {
+                    if (AuxProductsWardrobe.Any(f => f.Category.ToUpper() == "PANTS"))
+                    {
+                        returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.Category.ToUpper() == "PANTS").ToList())));
+                    }
+                    else
+                    {
+                        returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.Category.ToUpper() == "PANTS").ToList())));
+                    }
+                    if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "WATCHES"))
+                    {
+                        returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "WATCHES").ToList())));
+                    }
+                    else
+                    {
+                        returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "WATCHES").ToList())));
+                    }
+                    if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "SPORT_SHOES"))
+                    {
+                        returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "SPORT_SHOES").ToList())));
+                    }
+                    else
+                    {
+                        returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "SPORT_SHOES").ToList())));
+                    }
+                    if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "HOODIE"))
+                    {
+                        returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "HOODIE").ToList())));
+                    }
+                    else
+                    {
+                        returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "HOODIE").ToList())));
+                    }
                 }
             }
+            #endregion
+
+                #region season
+
+                if ((selectedSeason.ToUpper() == "WINTER" || selectedSeason=="AUTUMN") &&
+                    selectedStyle.ToUpper() == "ALL" && selectedStyle.ToUpper() != "")
+                {
+                    if (selectedGender.ToUpper() != "MALE")
+                    {
+
+                        if (AuxProductsWardrobe.Any(f => f.Category.ToUpper() == "PANTS"))
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.Category.ToUpper() == "PANTS").ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.Category.ToUpper() == "PANTS").ToList())));
+                        }
+                        if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "RINGS"))
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "RINGS").ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "RINGS").ToList())));
+                        }
+                        if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "NECKLACES"))
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "NECKLACES").ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "NECKLACES").ToList())));
+                        }
+                        if (AuxProductsWardrobe.Any(f => f.Category.ToUpper() == "SHOES"))
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.Category.ToUpper() == "BOOTS").ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.Category.ToUpper() == "SHOES").ToList())));
+                        }
+                    }
+                    else
+                    {
+                        if (AuxProductsWardrobe.Any(f => f.Category.ToUpper() == "PANTS"))
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.Category.ToUpper() == "PANTS").ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.Category.ToUpper() == "PANTS").ToList())));
+                        }
+                        if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "WATCHES"))
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "WATCHES").ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "WATCHES").ToList())));
+                        }
+                        if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "SPORT_SHOES"))
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "SPORT_SHOES").ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "SPORT_SHOES").ToList())));
+                        }
+                        if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "HOODIE"))
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "HOODIE").ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(GetProductsToShowFromRandom(GetRandomByType(AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "HOODIE").ToList())));
+                        }
+                        if (AuxProductsWardrobe.Any(f => f.SubCategory.ToUpper() == "BASIC_SWEATERS"))
+                        {
+                            returnList.Add(
+                                GetProductsToShowFromRandom(
+                                    GetRandomByType(
+                                        AuxProductsWardrobe.Where(f => f.SubCategory.ToUpper() == "BASIC_SWEATERS" )
+                                            .ToList())));
+                        }
+                        else
+                        {
+                            returnList.Add(
+                                GetProductsToShowFromRandom(
+                                    GetRandomByType(
+                                        AuxProductsOntology.Where(f => f.SubCategory.ToUpper() == "BASIC_SWEATERS")
+                                            .ToList())));
+                        }
+                    }
+                }
+
+                #endregion
+          
             return returnList;
         }
 
