@@ -1815,6 +1815,14 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&Adriana;Necklaces"/>
+            <rdf:Description rdf:about="&Adriana;Rings"/>
+            <rdf:Description rdf:about="&Adriana;Watches"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&Adriana;Accessories"/>
             <rdf:Description rdf:about="&Adriana;Brand"/>
             <rdf:Description rdf:about="&Adriana;Colour"/>
@@ -1829,14 +1837,6 @@
             <rdf:Description rdf:about="&Adriana;Skirts"/>
             <rdf:Description rdf:about="&Adriana;Style"/>
             <rdf:Description rdf:about="&Adriana;Sweaters"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&Adriana;Necklaces"/>
-            <rdf:Description rdf:about="&Adriana;Rings"/>
-            <rdf:Description rdf:about="&Adriana;Watches"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
