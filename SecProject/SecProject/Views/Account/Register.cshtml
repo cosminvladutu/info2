@@ -2,36 +2,48 @@
 @{
     ViewBag.Title = "Register";
 }
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>Create a new account.</h2>
-</hgroup>
+<div class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@ViewBag.Title.</h1>
+            <h2>Create a new account.</h2>
+        </hgroup>
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
 
-    <fieldset>
-        <legend>Registration Form</legend>
-        <ol>
-            <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.ConfirmPassword)
-                @Html.PasswordFor(m => m.ConfirmPassword)
-            </li>
-        </ol>
-        <input type="submit" value="Register" />
-    </fieldset>
-}
+            <fieldset>
+                <legend>Registration Form</legend>
+                <ol style="max-width: 510px">
+                    <li class="form-group">
+                        @Html.LabelFor(m => m.UserName)
+                        <div style="float:right">
+                            @Html.TextBoxFor(m => m.UserName, "class='form-control'")
+                        </div>
+                    </li>
+                    <li class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        <div style="float:right">
+                            @Html.PasswordFor(m => m.Password, "class='form-control'")
+                        </div>
+                    </li>
+                    <li class="form-group">
+                        @Html.LabelFor(m => m.ConfirmPassword)
+                        <div style="float:right">
+                            @Html.PasswordFor(m => m.ConfirmPassword, "class='form-control'")
+                        </div>
+                    </li>
+                </ol>
+                <input type="submit" value="Register" />
+            </fieldset>
+        }
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+    </div>
+</div>

@@ -1,30 +1,37 @@
 ﻿@{
     //ViewBag.Title = "Contact";
 }
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+<div class="featured">
+    <hgroup class="content-wrapper">
+        <h1>@ViewBag.Title</h1>
+        <h2>@ViewBag.Message</h2>
+    </hgroup>
+</div>
 
-<section class="contact">
-    <header>
-        <h3>Phone</h3>
-    </header>
-    <p>
-        @*<span class="label"></span>*@
-        <span>+40 749 084 655</span>
-    </p>
-</section>
+<div class="featured">
+    <div class="content-wrapper">
+        <section class="contact">
+            <header>
+                <h3>Phone</h3>
+            </header>
+            <p>
+                @*<span class="label"></span>*@
+                <span>+40 749 084 655</span>
+            </p>
+        </section>
 
-<section class="contact">
-    <header>
-        <h3>Email</h3>
-    </header>
-    <p>
-        <span><a href="mailto:cosmin.vladutu@gmail.com">cosmin.vladutu@gmail.com</a></span>
-    </p>
-    <p>
-        <span><a href="mailto:condreaioncatalin@gmail.com">condreaioncatalin@gmail.com</a></span>
-    </p>
-</section>
+        <section class="contact">
+            <header>
+                <h3>Email</h3>
+            </header>
+            <p>
+                <span><a href="mailto:cosmin.vladutu@gmail.com">cosmin.vladutu@gmail.com</a></span>
+            </p>
+            <p>
+                <span><a href="mailto:condreaioncatalin@gmail.com">condreaioncatalin@gmail.com</a></span>
+            </p>
+        </section>
+    </div>
+</div>

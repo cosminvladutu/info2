@@ -1,5 +1,5 @@
 ﻿<script src="~/Scripts/Map.js" type="text/javascript"></script>
-
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
 
 @{
     ViewBag.Title = "Home Page";
@@ -7,63 +7,69 @@
 @section featured {
     <section class="featured">
         <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+            <hgroup class="title"></hgroup>
         </div>
     </section>
 }
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
+<section class="featured">
+    <div class="content-wrapper">
+        <h2 class="h2">Here is a suggestion for the following day:</h2>
+        <div id="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <a href="#">
+                            <img src="http://www.i1.orgimg.com/images/2014/promovare/toate_paginile/0e8c73d5d46760bd5e1213c82f33f03b.jpg" alt="casual" style="max-width : 558px; padding-left : 0px;" />
+                        </a>
+                        <div class="box">
+                            <div class="top">
+                                <div class="bottom">
+                                    <div class="right-col">
+                                        <h2><a href="#" class="h2">&nbsp;</a> Fashion tips for you: </h2>
+                                        <div class="holder">
+                                            <div class="play">
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/kRZ8a1CGpvQ" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="cl">&nbsp;</div>
+                                        <div class="holder">
+                                            <div class="play">
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/VyyaEA1M14w" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cl">&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
 
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
-
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>
-
-
-<div class="ad">
-    <h2>Location & Weather</h2>
-     <!-- Geolocation JS -->
-
-    <div id="mapContainer"></div>
-    <a href="http://www.accuweather.com/en/ro/husi/276192/weather-forecast/276192" class="aw-widget-legal">
-        <!--
-        By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
-        -->
-    </a>
-    <div id="awcc1391511344874" class="aw-widget-current" data-locationkey="276192" data-unit="c" data-language="ro-ro"
-         data-useip="true" data-uid="awcc1391511344874">
+        </div>
     </div>
-    <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
-</div>   
+</section>
+
+
+<div class="featured">
+    <div class="content-wrapper">
+        <h2 class="h2">Location & Weather</h2>
+        <!-- Geolocation JS -->
+
+        <div id="mapContainer"></div>
+        <a href="http://www.accuweather.com/en/ro/husi/276192/weather-forecast/276192" class="aw-widget-legal">
+            <!--
+            By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+            -->
+        </a>
+        <div id="awcc1391511344874" class="aw-widget-current" data-locationkey="276192" data-unit="c" data-language="ro-ro"
+             data-useip="true" data-uid="awcc1391511344874">
+        </div>
+        <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+    </div>
+</div>
 
 <div id="results"></div>
 
-<div id="map" style="width: 450px; height: 400px;"></div>
+<div id="map" style="width: 450px; max-height: 400px;"></div>
