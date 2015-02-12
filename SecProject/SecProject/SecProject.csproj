@@ -212,10 +212,12 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AuxProductModel.cs" />
     <Compile Include="Models\EnumerableDropDownViewModel.cs" />
     <Compile Include="Models\ProductOntologyFilterModelViewModel.cs" />
     <Compile Include="Models\ProductsToShow.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
+    <Compile Include="Models\WhatToWearMainViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -288,6 +290,7 @@
     <Content Include="Scripts\Map2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\WhatToWear.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -338,6 +341,10 @@
     <Content Include="Views\Home\MyWardrobe.cshtml" />
     <Content Include="Views\Home\PartialViews\ProductFilterInWardrobe.cshtml" />
     <Content Include="Views\Home\PartialViews\ProductInMyWardrobePartialView.cshtml" />
+    <Content Include="Views\Home\WhatToWear.cshtml" />
+    <Content Include="Views\Home\WhatToWearFilterPartial.cshtml" />
+    <Content Include="Views\Home\WhatToWearProducts.cshtml" />
+    <Content Include="Views\Home\View1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -76,7 +76,7 @@ namespace SecProject.Controllers
         public ActionResult MyWardrobe()
         {
             var productVM = new ProductViewModel();
-          
+
             productVM.PopulateWardrobe(ProductTypes);
 
             return View("MyWardrobe", productVM);
@@ -93,7 +93,19 @@ namespace SecProject.Controllers
 
         public ActionResult WhatToWear()
         {
-            throw new System.NotImplementedException();
+            var model = new WhatToWearMainViewModel();
+            model.PopulateModel(ProductTypes, "", "", "");
+
+            return PartialView("WhatToWear", model);
+        }
+        public ActionResult WhatToWearRandom(string selectedGender, string selectedStyle, string selectedSeason)
+        {
+            var model = new WhatToWearMainViewModel();
+
+            model.ProductList = model.PopulateRandomList(selectedGender, selectedStyle, selectedSeason);
+
+
+            return PartialView("WhatToWearProducts", model.ProductList);
         }
     }
 }

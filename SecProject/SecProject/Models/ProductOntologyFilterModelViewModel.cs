@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
 using Common;
 using SecProject.BL;
@@ -51,12 +48,12 @@ namespace SecProject.Models
 
             var allSeasons = new Populate().PopulateAllSeasons();
             allSeasons.Add("All", "All");
-            Season = new EnumerableDropDownViewModel(allSeasons, selectedBrand == "" ? "All" : selectedBrand);
+            Season = new EnumerableDropDownViewModel(allSeasons, selectedSeason == "" ? "All" : selectedSeason);
             Season.Items = Season.Items.OrderBy(t => t.Text).ToList();
 
             var allStyles = new Populate().PopulateAllStyles();
             allStyles.Add("All", "All");
-            Style = new EnumerableDropDownViewModel(allStyles, selectedStyle == "" ? "All" : selectedBrand);
+            Style = new EnumerableDropDownViewModel(allStyles, selectedStyle == "" ? "All" : selectedStyle);
             Style.Items = Style.Items.OrderBy(t => t.Text).ToList();
         }
 

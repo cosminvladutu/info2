@@ -1,0 +1,34 @@
+﻿@model List<SecProject.Models.ProductsToShow>
+
+<table>
+    @for (int index = 0; index < Model.Count(); index++)
+    {
+        if (index % 3 == 0)
+        {
+            <tr></tr>
+            <td>
+                @if (!String.IsNullOrWhiteSpace(Model[index].ImgUrl))
+                {
+
+                    <img src="@Url.Content(Model[index].ImgUrl)" style="height: 250px" alt="Image" />
+                    <div style="margin-bottom: 3px; margin-top: 3px; margin-right: 3px; margin-left: 3px" align="center">
+                        <a href=@Model[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
+                    </div>
+                }
+            </td>
+
+        }
+        else
+        {
+            <td>
+                @if (!String.IsNullOrWhiteSpace(Model[index].ImgUrl))
+                {
+                    <img src="@Url.Content(Model[index].ImgUrl)" style="height: 250px" alt="Image" />
+                    <div style="margin-bottom: 3px; margin-top: 3px; margin-right: 3px; margin-left: 3px; " align="center">
+                        <a href=@Model[index].BuyUrl target="_blank" class="btn btn-danger btn-sm">Where to buy</a>
+                    </div>
+                }
+            </td>
+        }
+    }
+</table>
