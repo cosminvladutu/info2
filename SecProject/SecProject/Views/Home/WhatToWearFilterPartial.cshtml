@@ -1,0 +1,24 @@
+﻿@model SecProject.Models.WhatToWearMainViewModel
+
+<div class="row" style="text-align: center">
+    <div>
+        <div class="form-group col-md-2">
+            <label>@Html.DisplayNameFor(m => m.Gender)</label>
+            @Html.EditorFor(m => m.Gender)
+        </div>
+        <div class="form-group col-md-2">
+            <label>@Html.DisplayNameFor(m => m.Season)</label>
+            @Html.EditorFor(m => m.Season)
+        </div>
+        <div class="form-group col-md-2">
+            <label>@Html.DisplayNameFor(m => m.Style)</label>
+            @Html.EditorFor(m => m.Style)
+        </div>
+        <div class="form-group">
+            <a class="btn btn-edit btn-success" style="margin-top: 30px" id="idea" onclick="whatToWearAction()">Give me an idea</a>
+        </div>
+    </div>
+</div>
+<div id="WhatToWearProducts">
+    @{ Html.RenderPartial("WhatToWearProducts", Model.ProductList); }
+</div>

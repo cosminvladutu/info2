@@ -30,7 +30,7 @@
                         <li>@Html.ActionLink("Products", "Products", "Home")</li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <li>@Html.ActionLink("What to wear?", "Products", "Home")</li>
+                            <li>@Html.ActionLink("What to wear?", "WhatToWear", "Home")</li>
                             <li>@Html.ActionLink("My wardrobe", "MyWardrobe", "Home")</li>
                         }
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
